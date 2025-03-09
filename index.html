@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Mappy Intelligence - Curriculum Competency Visualization Tool</title>
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Mappy Intelligence - Curriculum Competency Visualization Tool">
+    <meta name="description" content="Desktop application that helps educators visualize competency coverage across multiple courses with interactive charts and visualizations. Making learning intentional, purposeful, and engaging.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mappy.app">
+    <meta property="og:title" content="Mappy Intelligence - Curriculum Competency Visualization Tool">
+    <meta property="og:description" content="Desktop application that helps educators visualize competency coverage across multiple courses with interactive charts and visualizations. Making learning intentional, purposeful, and engaging.">
+    <meta property="og:image" content="https://mappy.app/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mappy.app">
+    <meta property="twitter:title" content="Mappy Intelligence - Curriculum Competency Visualization Tool">
+    <meta property="twitter:description" content="Desktop application that helps educators visualize competency coverage across multiple courses with interactive charts and visualizations. Making learning intentional, purposeful, and engaging.">
+    <meta property="twitter:image" content="https://mappy.app/og-image.png">
+</head>
+<body class="d-flex flex-column vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <div class="brand-container">
+                    <img src="logo-ultra.png" class="brand-logo" alt="Mappy Logo">
+                    <img src="mappy-wordmark.svg" class="brand-wordmark white-svg" alt="Mappy">
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav mb-2 mb-lg-0 primary-nav">
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/waiting-list">Join Waiting List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/documentation">Documentation</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0 secondary-nav">
+                    <li class="nav-item social-item">
+                        <a class="nav-link social-link" href="https://discord.gg/SZMNea5s" aria-label="Discord">
+                            <i class="fab fa-discord fa-lg"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content mt-0 mt-sm-3">
+            <h1 class="hero-title mt-0 mt-sm-3">
+                <span class="hero-title-text px-4 mt-0 mt-sm-5">Mappy Intelligence</span>
+            </h1>
+            <p class="hero-subtitle">Curriculum Competency Visualization Tool</p>
+            <p class="hero-sub-subtitle">Interactive charts and visualizations for competency coverage analysis</p>
+            <div class="hero-buttons">
+                <a href="/waiting-list" class="hero-button primary">
+                    <i class="fa fa-user-plus me-2"></i> Join Waiting List
+                </a>
+                <a href="/release-notes" class="hero-button secondary">
+                    <i class="fa fa-code"></i> Release Notes
+                </a>
+            </div>
+        </div>
+        <div class="hero-images my-0 my-sm-5">
+            <img src="radar-plot-screenshot.png" alt="Radar Plot Screenshot" class="hero-image-1">
+            <img src="heatmap-screenshot.png" alt="Heatmap Screenshot" class="hero-image-2">
+        </div>
+    </section>
+
+    <section class="gif-section">
+        <div class="gif-content">
+            <h2 class="gif-title text-center">Our Mission</h2>
+            <p class="gif-description">
+                Making learning intentional, purposeful, and engaging for continuous growth
+            </p>
+        </div>
+    </section>
+
+
+    <section class="features">
+        <div class="feature">
+            <i class="feature-icon fas fa-chart-pie"></i>
+            <h2 class="feature-title">Radar Plots</h2>
+            <p class="feature-description">
+                Display competency distribution with interactive tooltips for detailed information.
+            </p>
+        </div>
+        <div class="feature">
+            <i class="feature-icon fas fa-th"></i>
+            <h2 class="feature-title">Heatmaps</h2>
+            <p class="feature-description">
+                Binary and cumulative heatmaps to show competency presence and development over time.
+            </p>
+        </div>
+        <div class="feature">
+            <i class="feature-icon fas fa-file-alt"></i>
+            <h2 class="feature-title">Data Management</h2>
+            <p class="feature-description">
+                Import from CSV/XLSX and edit justifications directly within the application.
+            </p>
+        </div>
+    </section>
+
+    <section class="gif-section">
+        <div class="gif-content">
+            <h2 class="gif-title text-center">Interactive Visualizations</h2>
+            <p class="gif-description">
+                All visualizations in Mappy are interactive, allowing you to hover for details, filter by competency areas, and identify patterns across your curriculum. Easily track how competencies develop throughout a program sequence.
+            </p>
+        </div>
+        <div class="gif-container">
+            <img src="mappy-demo.gif" alt="Mappy Demo GIF" class="gif-image">
+        </div>
+    </section>
+
+    <section class="faq">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <div class="accordion">
+            <div class="accordion-item">
+                <h3 id="headingOne-1-header" class="accordion-header">What are the system requirements? <span class="accordion-toggle">+</span></h3>
+                <div id="headingOne-1-content" class="accordion-content" style="display: none;">
+                    <div class="faq-content">
+                        <p><strong>OS:</strong> Windows 10/11, macOS, Linux</p>
+                        <p><strong>RAM:</strong> 4GB minimum</p>
+                        <p><strong>Storage:</strong> 500MB free space</p>
+                        <p>Mappy is built with Electron and runs on most modern operating systems.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h3 id="headingTwo-1-header" class="accordion-header">What file formats are supported? <span class="accordion-toggle">+</span></h3>
+                <div id="headingTwo-1-content" class="accordion-content" style="display: none;">
+                    <div class="faq-content">
+                        <p>Mappy accepts CSV and XLSX files for data import and can export to CSV or JSON formats. Your data should have courses as rows, competencies as columns, and justification text in cells.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h3 id="headingThree-1-header" class="accordion-header">How do I edit justification text? <span class="accordion-toggle">+</span></h3>
+                <div id="headingThree-1-content" class="accordion-content" style="display: none;">
+                    <div class="faq-content">
+                        <p>In Single Course View, select a course from the dropdown to see all its competencies. Click on a justification cell to edit the content directly in the application. After editing, click "Save" to preserve your changes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h3 id="headingFour-1-header" class="accordion-header">Is internet access required? <span class="accordion-toggle">+</span></h3>
+                <div id="headingFour-1-content" class="accordion-content" style="display: none;">
+                    <div class="faq-content">
+                        <p>No, Mappy works completely offline. Internet access is only needed for downloading updates or accessing online documentation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h3 id="headingFive-1-header" class="accordion-header">How can I contribute to Mappy? <span class="accordion-toggle">+</span></h3>
+                <div id="headingFive-1-content" class="accordion-content" style="display: none;">
+                    <div class="faq-content">
+                        <p>You can contribute to Mappy Intelligence by reporting issues, suggesting features, or providing feedback through our <a href="https://discord.gg/SZMNea5s">Discord community</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="customization">
+        <div class="customization-content">
+            <h2 class="customization-title">Customize Your Analysis</h2>
+            <p class="customization-description">
+                Mappy offers flexible visualization options to suit your specific curriculum analysis needs. Filter by competency categories, adjust color schemes, and generate focused reports for different audiences and purposes.
+            </p>
+        </div>
+        <div class="customization-images">
+            <img src="settings-screenshot.png" alt="Settings Screen" class="customization-image-1">
+            <img src="custom-view-screenshot.png" alt="Custom View" class="customization-image-2">
+        </div>
+    </section>
+
+    <section class="why-circular-section">
+        <div class="container">
+            <h2 class="why-title">Why Curriculum Mapping Matters</h2>
+            <div class="why-container">
+                <div class="why-center">
+                    <div class="why-center-content">
+                        <i class="fas fa-lightbulb center-icon"></i>
+                        <h3>Transform Your Curriculum</h3>
+                        <p>Click on the surrounding elements to learn how curriculum mapping creates meaningful educational experiences</p>
+                    </div>
+                </div>
+                <div class="why-items">
+                    <div class="why-item" data-reason="Alignment with Standards">
+                        <div class="why-item-inner">
+                            <i class="fas fa-award"></i>
+                            <span>Standards Alignment</span>
+                        </div>
+                        <div class="why-tooltip">
+                            <h4>Alignment with Standards</h4>
+                            <p>Ensures the curriculum meets state, national, or institutional standards, preparing students to achieve required benchmarks and outcomes.</p>
+                        </div>
+                    </div>
+                    <div class="why-item" data-reason="Vertical and Horizontal Coherence">
+                        <div class="why-item-inner">
+                            <i class="fas fa-sitemap"></i>
+                            <span>Curriculum Coherence</span>
+                        </div>
+                        <div class="why-tooltip">
+                            <h4>Vertical and Horizontal Coherence</h4>
+                            <p>Promotes logical progression of content across grade levels (vertical coherence) and consistency within the same grade or course (horizontal coherence).</p>
+                        </div>
+                    </div>
+                    <div class="why-item" data-reason="Identifying Gaps and Redundancies">
+                        <div class="why-item-inner">
+                            <i class="fas fa-search"></i>
+                            <span>Gap Analysis</span>
+                        </div>
+                        <div class="why-tooltip">
+                            <h4>Identifying Gaps and Redundancies</h4>
+                            <p>Highlights missing content or skills (gaps) and eliminates unnecessary repetition (redundancies) to optimize curriculum delivery.</p>
+                        </div>
+                    </div>
+                    <div class="why-item" data-reason="Improving Student Learning Outcomes">
+                        <div class="why-item-inner">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Better Outcomes</span>
+                        </div>
+                        <div class="why-tooltip">
+                            <h4>Improving Student Learning Outcomes</h4>
+                            <p>Aligns teaching methods and assessments with learning objectives, leading to better student preparedness and achievement.</p>
+                        </div>
+                    </div>
+                    <div class="why-item" data-reason="Collaboration Among Educators">
+                        <div class="why-item-inner">
+                            <i class="fas fa-users"></i>
+                            <span>Educator Collaboration</span>
+                        </div>
+                        <div class="why-tooltip">
+                            <h4>Collaboration Among Educators</h4>
+                            <p>Facilitates teamwork among teachers to align strategies, share resources, and create a cohesive educational experience.</p>
+                        </div>
+                    </div>
+                    <div class="why-item" data-reason="Transparency and Accountability">
+                        <div class="why-item-inner">
+                            <i class="fas fa-clipboard-check"></i>
+                            <span>Transparency</span>
+                        </div>
+                        <div class="why-tooltip">
+                            <h4>Transparency and Accountability</h4>
+                            <p>Provides a clear record of what is being taught, increasing accountability to stakeholders (parents, administrators, regulators) and enhancing trust.</p>
+                        </div>
+                    </div>
+                    <div class="why-item" data-reason="Enhanced Assessment Practices">
+                        <div class="why-item-inner">
+                            <i class="fas fa-tasks"></i>
+                            <span>Better Assessment</span>
+                        </div>
+                        <div class="why-tooltip">
+                            <h4>Enhanced Assessment Practices</h4>
+                            <p>Aligns assessments with curriculum goals to ensure validity and meaningful measurement of student progress.</p>
+                        </div>
+                    </div>
+                    <div class="why-item" data-reason="Resource Allocation">
+                        <div class="why-item-inner">
+                            <i class="fas fa-puzzle-piece"></i>
+                            <span>Resource Allocation</span>
+                        </div>
+                        <div class="why-tooltip">
+                            <h4>Resource Allocation</h4>
+                            <p>Guides efficient distribution of teaching materials, technology, and professional development resources to strengthen curriculum delivery.</p>
+                        </div>
+                    </div>
+                    <div class="why-item" data-reason="Supporting Accreditation">
+                        <div class="why-item-inner">
+                            <i class="fas fa-certificate"></i>
+                            <span>Accreditation</span>
+                        </div>
+                        <div class="why-tooltip">
+                            <h4>Supporting Accreditation</h4>
+                            <p>Provides evidence of curriculum alignment and planning to meet accreditation and compliance requirements.</p>
+                        </div>
+                    </div>
+                    <div class="why-item" data-reason="Continuous Improvement">
+                        <div class="why-item-inner">
+                            <i class="fas fa-sync-alt"></i>
+                            <span>Continuous Improvement</span>
+                        </div>
+                        <div class="why-tooltip">
+                            <h4>Continuous Improvement</h4>
+                            <p>Serves as a foundation for regular curriculum reviews, enabling schools to adapt to changing standards, educational trends, and student needs.</p>
+                        </div>
+                    </div>
+                    <div class="why-item" data-reason="Interdisciplinary Connections">
+                        <div class="why-item-inner">
+                            <i class="fas fa-link"></i>
+                            <span>Cross-Discipline Links</span>
+                        </div>
+                        <div class="why-tooltip">
+                            <h4>Interdisciplinary Connections</h4>
+                            <p>Encourages integration of skills (e.g., critical thinking, writing) across subjects, fostering holistic learning experiences.</p>
+                        </div>
+                    </div>
+                    <div class="why-item" data-reason="Long-Term Planning">
+                        <div class="why-item-inner">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Long-Term Planning</span>
+                        </div>
+                        <div class="why-tooltip">
+                            <h4>Long-Term Planning</h4>
+                            <p>Offers a comprehensive overview of curriculum progression, enabling tracking of student growth and preparation for future learning stages.</p>
+                        </div>
+                    </div>
+                    <div class="why-item" data-reason="Improved Communication">
+                        <div class="why-item-inner">
+                            <i class="fas fa-comments"></i>
+                            <span>Better Communication</span>
+                        </div>
+                        <div class="why-tooltip">
+                            <h4>Improved Communication</h4>
+                            <p>Enhances communication between teachers, administrators, and stakeholders about curriculum goals and progress.</p>
+                        </div>
+                    </div>
+                    <div class="why-item" data-reason="Student Engagement">
+                        <div class="why-item-inner">
+                            <i class="fas fa-hand-pointer"></i>
+                            <span>Student Engagement</span>
+                        </div>
+                        <div class="why-tooltip">
+                            <h4>Student Engagement</h4>
+                            <p>Clarifies learning paths for students, helping them connect coursework to future goals and fostering ownership of their education.</p>
+                        </div>
+                    </div>
+                    <div class="why-item" data-reason="Professional Development">
+                        <div class="why-item-inner">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Professional Growth</span>
+                        </div>
+                        <div class="why-tooltip">
+                            <h4>Professional Development</h4>
+                            <p>Identifies areas where educators need additional training, supporting their growth and improving instructional practices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="call-to-action">
+        <h2 class="cta-title">Start Visualizing Today</h2>
+        <p class="cta-description">
+            Join our waiting list to get early access to Mappy Intelligence and transform your curriculum analysis.
+        </p>
+        <a href="/waiting-list" class="cta-button">
+            <i class="fa fa-user-plus me-2"></i> Join Waiting List
+        </a>
+    </section>
+
+    <footer class="my-footer py-3">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item">
+                <a href="/" class="nav-link px-2 text-body-secondary">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="/waiting-list" class="nav-link px-2 text-body-secondary">Join Waiting List</a>
+            </li>
+            <li class="nav-item">
+                <a href="/documentation" class="nav-link px-2 text-body-secondary">Documentation</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://discord.gg/SZMNea5s" class="nav-link px-2 text-body-secondary">Feedback</a>
+            </li>
+        </ul>
+        <p class="text-center">© 2025 Mappy Intelligence</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        // Simple accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = document.getElementById(header.id.replace('-header', '-content'));
+                if (content.style.display === 'none') {
+                    content.style.display = 'block';
+                    header.querySelector('.accordion-toggle').textContent = '-';
+                } else {
+                    content.style.display = 'none';
+                    header.querySelector('.accordion-toggle').textContent = '+';
+                }
+            });
+        });
+
+        // Why section interactive functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile device tooltip handling
+            if (window.innerWidth <= 768) {
+                document.querySelectorAll('.why-item').forEach(item => {
+                    item.addEventListener('click', function() {
+                        const reason = this.getAttribute('data-reason');
+                        const tooltip = this.querySelector('.why-tooltip');
+                        
+                        // Create a modal
+                        const modal = document.createElement('div');
+                        modal.className = 'why-modal';
+                        modal.innerHTML = tooltip.innerHTML;
+                        
+                        // Add close button
+                        const closeBtn = document.createElement('button');
+                        closeBtn.innerText = '×';
+                        closeBtn.className = 'modal-close';
+                        modal.appendChild(closeBtn);
+                        
+                        // Add modal to body
+                        document.body.appendChild(modal);
+                        
+                        // Show modal
+                        setTimeout(() => {
+                            modal.classList.add('show');
+                        }, 10);
+                        
+                        // Close on button click
+                        closeBtn.addEventListener('click', function() {
+                            modal.classList.remove('show');
+                            setTimeout(() => {
+                                document.body.removeChild(modal);
+                            }, 300);
+                        });
+                        
+                        // Close on outside click
+                        modal.addEventListener('click', function(e) {
+                            if (e.target === modal) {
+                                modal.classList.remove('show');
+                                setTimeout(() => {
+                                    document.body.removeChild(modal);
+                                }, 300);
+                            }
+                        });
+                    });
+                });
+                
+                // Add modal styles
+                const style = document.createElement('style');
+                style.textContent = `
+                    .why-modal {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0,0,0,0.5);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: 1000;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: opacity 0.3s ease, visibility 0.3s ease;
+                    }
+                    .why-modal.show {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    .why-modal h4, .why-modal p {
+                        color: var(--text-dark);
+                        margin: 0 0 15px;
+                    }
+                    .why-modal h4 {
+                        font-size: 1.3rem;
+                    }
+                    .why-modal p {
+                        font-size: 1rem;
+                    }
+                    .modal-close {
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        background: none;
+                        border: none;
+                        font-size: 24px;
+                        cursor: pointer;
+                        color: var(--primary-dark);
+                    }
+                    .why-modal {
+                        padding: 25px;
+                        background: white;
+                        border-radius: 8px;
+                        width: 85%;
+                        max-width: 350px;
+                        position: relative;
+                        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+        });
+    </script>
+</body>
+</html>

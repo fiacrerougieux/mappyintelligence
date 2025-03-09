@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Release Notes - Mappy Intelligence</title>
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Release Notes - Mappy Intelligence">
+    <meta name="description" content="Track the evolution of Mappy Intelligence with our detailed release notes and changelog.">
+</head>
+<body class="d-flex flex-column vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <div class="brand-container">
+                    <img src="logo-ultra.png" class="brand-logo" alt="Mappy Logo">
+                    <img src="mappy-wordmark.svg" class="brand-wordmark white-svg" alt="Mappy">
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav mb-2 mb-lg-0 primary-nav">
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/waiting-list">Join Waiting List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/documentation">Documentation</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0 secondary-nav">
+                    <li class="nav-item social-item">
+                        <a class="nav-link social-link" href="https://discord.gg/SZMNea5s" aria-label="Discord">
+                            <i class="fab fa-discord fa-lg"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="release-header">
+        <div class="container text-center py-5">
+            <h1>Mappy Intelligence Release Notes</h1>
+            <p class="lead">Track the evolution of our curriculum mapping tool</p>
+        </div>
+    </section>
+
+    <section class="release-content">
+        <div class="container py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="version-timeline">
+                        <div class="timeline-item current">
+                            <div class="version-badge">
+                                <span class="badge bg-primary">LATEST</span>
+                            </div>
+                            <div class="version-card">
+                                <div class="version-header">
+                                    <h2>Version 1.0.5</h2>
+                                </div>
+                                <div class="version-content">
+                                    <ul>
+                                        <li>Added button to download all visualizations at once</li>
+                                        <li>Updated data structure to support course code and item concatenation</li>
+                                        <li>Improved heatmap visualization with increased right margins</li>
+                                        <li>Updated app logo to SVG format</li>
+                                        <li>Added JSON export format option</li>
+                                        <li>Fixed visualization download function for all chart types</li>
+                                        <li>Added high-resolution logo for Linux distribution</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="version-badge">
+                                <span class="badge bg-info">STABLE</span>
+                            </div>
+                            <div class="version-card">
+                                <div class="version-header">
+                                    <h2>Version 1.0.4</h2>
+                                </div>
+                                <div class="version-content">
+                                    <ul>
+                                        <li>Changed default save format from CSV to XLSX</li>
+                                        <li>Improved template.xlsx loading in production builds</li>
+                                        <li>Updated documentation to reference XLSX format</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="version-badge">
+                                <span class="badge bg-info">STABLE</span>
+                            </div>
+                            <div class="version-card">
+                                <div class="version-header">
+                                    <h2>Version 1.0.3</h2>
+                                </div>
+                                <div class="version-content">
+                                    <ul>
+                                        <li>Added Single Course View for detailed course analysis</li>
+                                        <li>Implemented custom template support</li>
+                                        <li>Enhanced visualization tooltips with detailed information</li>
+                                        <li>Added inline editing of justification text</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="version-badge">
+                                <span class="badge bg-info">STABLE</span>
+                            </div>
+                            <div class="version-card">
+                                <div class="version-header">
+                                    <h2>Version 1.0.2</h2>
+                                </div>
+                                <div class="version-content">
+                                    <ul>
+                                        <li>Added Cumulative Heatmap visualization</li>
+                                        <li>Implemented export to multiple formats</li>
+                                        <li>Enhanced data validation and error handling</li>
+                                        <li>Improved UI responsiveness</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="version-badge">
+                                <span class="badge bg-secondary">INITIAL</span>
+                            </div>
+                            <div class="version-card">
+                                <div class="version-header">
+                                    <h2>Version 1.0.1</h2>
+                                </div>
+                                <div class="version-content">
+                                    <ul>
+                                        <li>Initial release with core visualizations (Radar Plot, Binary Heatmap)</li>
+                                        <li>Basic CSV import/export functionality</li>
+                                        <li>Fundamental data management capabilities</li>
+                                        <li>Cross-platform desktop application support</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="roadmap-section mt-5">
+                        <h2>Future Roadmap</h2>
+                        <p>We're continuously working to improve Mappy Intelligence with new features based on user feedback:</p>
+                        
+                        <div class="roadmap-items">
+                            <div class="roadmap-item">
+                                <div class="roadmap-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="roadmap-content">
+                                    <h3>AI-Assisted Justification</h3>
+                                    <p>Generate initial justification text suggestions based on course content and competency descriptions</p>
+                                </div>
+                            </div>
+                            
+                            <div class="roadmap-item">
+                                <div class="roadmap-icon">
+                                    <i class="fas fa-project-diagram"></i>
+                                </div>
+                                <div class="roadmap-content">
+                                    <h3>Advanced Network Visualization</h3>
+                                    <p>Visualize relationships between courses and competencies using network graphs</p>
+                                </div>
+                            </div>
+                            
+                            <div class="roadmap-item">
+                                <div class="roadmap-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="roadmap-content">
+                                    <h3>Collaborative Editing</h3>
+                                    <p>Real-time collaboration features allowing multiple users to work on the same curriculum map</p>
+                                </div>
+                            </div>
+                            
+                            <div class="roadmap-item">
+                                <div class="roadmap-icon">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                                <div class="roadmap-content">
+                                    <h3>Cloud Synchronization</h3>
+                                    <p>Securely store and access your curriculum maps across devices</p>
+                                </div>
+                            </div>
+                            
+                            <div class="roadmap-item">
+                                <div class="roadmap-icon">
+                                    <i class="fas fa-file-code"></i>
+                                </div>
+                                <div class="roadmap-content">
+                                    <h3>API for Integration</h3>
+                                    <p>Connect Mappy with your institution's LMS and assessment platforms</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-box mt-5">
+                        <h3>Want Early Access to Next Version?</h3>
+                        <p>Join our waiting list and be first to try new features as they become available.</p>
+                        <a href="/waiting-list" class="btn btn-primary">
+                            <i class="fa fa-user-plus me-2"></i> Join Waiting List
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="my-footer py-3 mt-auto">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item">
+                <a href="/" class="nav-link px-2 text-body-secondary">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="/waiting-list" class="nav-link px-2 text-body-secondary">Join Waiting List</a>
+            </li>
+            <li class="nav-item">
+                <a href="/documentation" class="nav-link px-2 text-body-secondary">Documentation</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://discord.gg/SZMNea5s" class="nav-link px-2 text-body-secondary">Feedback</a>
+            </li>
+        </ul>
+        <p class="text-center">© 2025 Mappy Intelligence</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <style>
+        /* Release notes specific styles */
+        .release-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-light);
+        }
+        
+        .release-content {
+            background-color: var(--light-bg);
+            min-height: 500px;
+        }
+        
+        .version-timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+        
+        .version-timeline:before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background-color: #e9ecef;
+            border-radius: 4px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 50px;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .version-badge {
+            position: absolute;
+            left: -40px;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+        }
+        
+        .version-badge .badge {
+            transform: scale(0.8);
+        }
+        
+        .version-card {
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        
+        .version-header {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .version-header h2 {
+            font-size: 1.4rem;
+            margin: 0;
+            color: var(--primary-dark);
+        }
+        
+        .version-header small {
+            font-size: 0.9rem;
+            margin-left: 10px;
+        }
+        
+        .version-content {
+            padding: 20px;
+        }
+        
+        .version-content ul {
+            margin-bottom: 0;
+        }
+        
+        .version-content li {
+            margin-bottom: 8px;
+            color: #555;
+        }
+        
+        .timeline-item.current .version-badge:after {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+        }
+        
+        .timeline-item.current .version-card {
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .roadmap-section h2 {
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+        }
+        
+        .roadmap-items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .roadmap-item {
+            display: flex;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        
+        .roadmap-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .roadmap-content {
+            padding: 20px;
+            flex: 1;
+        }
+        
+        .roadmap-content h3 {
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+        
+        .roadmap-content p {
+            color: #555;
+            margin-bottom: 0;
+        }
+        
+        .cta-box {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .cta-box h3 {
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+        
+        .cta-box p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        .cta-box .btn {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 10px 20px;
+            font-weight: 600;
+        }
+        
+        .cta-box .btn:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+        
+        @media (max-width: 576px) {
+            .version-header h2 {
+                font-size: 1.2rem;
+            }
+            
+            .version-header small {
+                display: block;
+                margin-left: 0;
+                margin-top: 5px;
+            }
+            
+            .roadmap-icon {
+                width: 60px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</body>
+</html>

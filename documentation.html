@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Documentation - Mappy Intelligence</title>
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Documentation - Mappy Intelligence">
+    <meta name="description" content="Learn how to use Mappy Intelligence to visualize competency coverage across multiple courses with interactive charts and visualizations.">
+</head>
+<body class="d-flex flex-column vh-100">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <div class="brand-container">
+                    <img src="logo-ultra.png" class="brand-logo" alt="Mappy Logo">
+                    <img src="mappy-wordmark.svg" class="brand-wordmark white-svg" alt="Mappy">
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav mb-2 mb-lg-0 primary-nav">
+                    <li class="nav-item d-lg-none">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/waiting-list">Join Waiting List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/documentation">Documentation</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0 secondary-nav">
+                    <li class="nav-item social-item">
+                        <a class="nav-link social-link" href="https://discord.gg/SZMNea5s" aria-label="Discord">
+                            <i class="fab fa-discord fa-lg"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="documentation-header">
+        <div class="container text-center py-5">
+            <h1>Mappy Intelligence Documentation</h1>
+            <p class="lead">Everything you need to know to make the most of Mappy Intelligence</p>
+        </div>
+    </section>
+
+    <section class="documentation-content">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-lg-3 mb-4">
+                    <div class="doc-sidebar sticky-top pt-3" style="top: 100px;">
+                        <div class="list-group">
+                            <a href="#data-management" class="list-group-item list-group-item-action">1. Data Management</a>
+                            <a href="#visualization" class="list-group-item list-group-item-action">2. Visualization Options</a>
+                            <a href="#analysis" class="list-group-item list-group-item-action">3. Analysis Tools</a>
+                            <a href="#export" class="list-group-item list-group-item-action">4. Exporting Results</a>
+                            <a href="#settings" class="list-group-item list-group-item-action">5. Settings & Preferences</a>
+                            <a href="#keyboard-shortcuts" class="list-group-item list-group-item-action">6. Keyboard Shortcuts</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div id="data-management" class="help-section mb-5">
+                        <div class="help-section-header">
+                            <div class="help-icon-container">
+                                <svg class="help-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+                                </svg>
+                            </div>
+                            <h2>1. Data Management</h2>
+                        </div>
+                        <div class="help-content">
+                            <h3>Importing Data</h3>
+                            <p>Mappy analyzes Excel (.xlsx) files where each row represents a course and its competency coverage:</p>
+                            <ul>
+                                <li>Select <strong>Open File</strong> from the sidebar to import your Excel file</li>
+                                <li>Any non-empty text in a competency cell represents coverage and serves as justification text</li>
+                                <li>For optimal visualization, include course codes in the first column</li>
+                                <li>Mappy will automatically load template.xlsx on startup, if available</li>
+                            </ul>
+                            
+                            <h3>Saving Changes</h3>
+                            <p>After modifying competency justifications:</p>
+                            <ul>
+                                <li>Select <strong>Save File</strong> to preserve your modifications for future sessions</li>
+                                <li>Choose from Excel (.xlsx), JSON (.json), or CSV (.csv) formats for your data</li>
+                                <li>Your data will be exported with all changes included</li>
+                            </ul>
+
+                            <h3>Data Structure</h3>
+                            <p>For optimal results, structure your data as follows:</p>
+                            <ul>
+                                <li>First column: Course codes or unique identifiers</li>
+                                <li>Second column: Course names or descriptions</li>
+                                <li>Subsequent columns: One column per competency</li>
+                                <li>Header row: Competency names or codes</li>
+                                <li>Cell content: Justification text explaining how the course addresses the competency</li>
+                            </ul>
+                        </div>
+                    </div>
+          
+                    <div id="visualization" class="help-section mb-5">
+                        <div class="help-section-header">
+                            <div class="help-icon-container">
+                                <svg class="help-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                                    <line x1="9" y1="3" x2="9" y2="21" />
+                                    <line x1="15" y1="3" x2="15" y2="21" />
+                                    <line x1="3" y1="9" x2="21" y2="9" />
+                                    <line x1="3" y1="15" x2="21" y2="15" />
+                                </svg>
+                            </div>
+                            <h2>2. Visualization Options</h2>
+                        </div>
+                        <div class="help-content">
+                            <h3>Radar Plots</h3>
+                            <p>Radar plots provide a comprehensive view of competency coverage for individual courses:</p>
+                            <ul>
+                                <li>Select a course from the dropdown to visualize its competency coverage</li>
+                                <li>Hover over radar points to see detailed justification text</li>
+                                <li>Toggle between absolute values and normalized percentages</li>
+                                <li>Compare multiple courses by enabling the "Multi-course comparison" option</li>
+                            </ul>
+                            
+                            <h3>Heatmaps</h3>
+                            <p>Heatmaps offer a bird's-eye view of competency coverage across all courses:</p>
+                            <ul>
+                                <li><strong>Binary Heatmap:</strong> Shows presence or absence of each competency</li>
+                                <li><strong>Intensity Heatmap:</strong> Displays the strength of coverage based on justification length</li>
+                                <li>Click on any cell to view the full justification text</li>
+                                <li>Sort courses by program sequence for progression analysis</li>
+                            </ul>
+
+                            <h3>Customizing Visualizations</h3>
+                            <p>Tailor visualizations to your specific needs:</p>
+                            <ul>
+                                <li>Adjust color schemes in the Settings panel</li>
+                                <li>Filter by competency groups or individual competencies</li>
+                                <li>Zoom in/out on complex visualizations</li>
+                                <li>Toggle labels and legends for cleaner presentations</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="analysis" class="help-section mb-5">
+                        <div class="help-section-header">
+                            <div class="help-icon-container">
+                                <svg class="help-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                </svg>
+                            </div>
+                            <h2>3. Analysis Tools</h2>
+                        </div>
+                        <div class="help-content">
+                            <h3>Gap Analysis</h3>
+                            <p>Identify gaps in your curriculum coverage:</p>
+                            <ul>
+                                <li>The <strong>Curriculum Report</strong> highlights competencies with low or no coverage</li>
+                                <li>Set coverage thresholds in Settings to customize what constitutes a "gap"</li>
+                                <li>Filter by program year to identify progression issues</li>
+                            </ul>
+                            
+                            <h3>Redundancy Detection</h3>
+                            <p>Optimize your curriculum by identifying redundant coverage:</p>
+                            <ul>
+                                <li>The <strong>Overlap Report</strong> shows competencies covered by multiple courses</li>
+                                <li>View courses with similar coverage patterns</li>
+                                <li>Use this information to streamline curriculum design</li>
+                            </ul>
+
+                            <h3>Progression Analysis</h3>
+                            <p>Ensure competencies develop appropriately throughout a program:</p>
+                            <ul>
+                                <li>Arrange courses in sequence to visualize competency progression</li>
+                                <li>Identify competencies that are introduced but not reinforced</li>
+                                <li>Track development from introductory to mastery levels</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="export" class="help-section mb-5">
+                        <div class="help-section-header">
+                            <div class="help-icon-container">
+                                <svg class="help-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                    <polyline points="7 10 12 15 17 10"></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                </svg>
+                            </div>
+                            <h2>4. Exporting Results</h2>
+                        </div>
+                        <div class="help-content">
+                            <h3>Visualization Export</h3>
+                            <p>Share your visualizations with stakeholders:</p>
+                            <ul>
+                                <li>Use the <strong>Export Image</strong> button to save plots as PNG, JPG, or SVG</li>
+                                <li>Copy to clipboard for easy pasting into presentations</li>
+                                <li>Export multiple visualizations at once using the batch export option</li>
+                            </ul>
+                            
+                            <h3>Reports Generation</h3>
+                            <p>Create comprehensive reports for accreditation or review:</p>
+                            <ul>
+                                <li>Generate a complete <strong>Curriculum Report</strong> with all visualizations and analysis</li>
+                                <li>Export to PDF or HTML formats</li>
+                                <li>Customize reports to include only selected sections</li>
+                            </ul>
+
+                            <h3>Data Export</h3>
+                            <p>Export your processed data for use in other tools:</p>
+                            <ul>
+                                <li>Save in Excel, CSV, or JSON formats</li>
+                                <li>Export summary statistics for further analysis</li>
+                                <li>Generate data tables that can be imported into other visualization tools</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="settings" class="help-section mb-5">
+                        <div class="help-section-header">
+                            <div class="help-icon-container">
+                                <svg class="help-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                                </svg>
+                            </div>
+                            <h2>5. Settings & Preferences</h2>
+                        </div>
+                        <div class="help-content">
+                            <h3>Appearance Settings</h3>
+                            <p>Customize the application's look and feel:</p>
+                            <ul>
+                                <li>Choose between light and dark themes</li>
+                                <li>Select from predefined color palettes or create your own</li>
+                                <li>Adjust font sizes for better readability</li>
+                                <li>Configure default chart dimensions</li>
+                            </ul>
+                            
+                            <h3>Data Preferences</h3>
+                            <p>Configure how Mappy processes your data:</p>
+                            <ul>
+                                <li>Set default import/export formats</li>
+                                <li>Configure column mappings for non-standard data</li>
+                                <li>Define competency groupings for organizational purposes</li>
+                                <li>Set threshold values for gap analysis</li>
+                            </ul>
+
+                            <h3>Application Behavior</h3>
+                            <p>Control how the application works:</p>
+                            <ul>
+                                <li>Enable/disable auto-save functionality</li>
+                                <li>Configure startup behavior</li>
+                                <li>Set default visualization types</li>
+                                <li>Manage recent files list</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div id="keyboard-shortcuts" class="help-section mb-5">
+                        <div class="help-section-header">
+                            <div class="help-icon-container">
+                                <svg class="help-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect>
+                                    <path d="M6 8h.01"></path>
+                                    <path d="M10 8h.01"></path>
+                                    <path d="M14 8h.01"></path>
+                                    <path d="M18 8h.01"></path>
+                                    <path d="M8 12h.01"></path>
+                                    <path d="M12 12h.01"></path>
+                                    <path d="M16 12h.01"></path>
+                                    <path d="M7 16h10"></path>
+                                </svg>
+                            </div>
+                            <h2>6. Keyboard Shortcuts</h2>
+                        </div>
+                        <div class="help-content">
+                            <h3>File Operations</h3>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td width="30%"><kbd>Ctrl</kbd> + <kbd>O</kbd></td>
+                                    <td>Open File</td>
+                                </tr>
+                                <tr>
+                                    <td><kbd>Ctrl</kbd> + <kbd>S</kbd></td>
+                                    <td>Save File</td>
+                                </tr>
+                                <tr>
+                                    <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd></td>
+                                    <td>Save As...</td>
+                                </tr>
+                                <tr>
+                                    <td><kbd>Ctrl</kbd> + <kbd>E</kbd></td>
+                                    <td>Export Current View</td>
+                                </tr>
+                            </table>
+                            
+                            <h3>Navigation</h3>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td width="30%"><kbd>Ctrl</kbd> + <kbd>1</kbd> to <kbd>5</kbd></td>
+                                    <td>Switch between visualization tabs</td>
+                                </tr>
+                                <tr>
+                                    <td><kbd>Ctrl</kbd> + <kbd>Tab</kbd></td>
+                                    <td>Next tab</td>
+                                </tr>
+                                <tr>
+                                    <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd></td>
+                                    <td>Previous tab</td>
+                                </tr>
+                                <tr>
+                                    <td><kbd>F11</kbd></td>
+                                    <td>Toggle fullscreen mode</td>
+                                </tr>
+                            </table>
+
+                            <h3>Editing</h3>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <td width="30%"><kbd>Ctrl</kbd> + <kbd>Z</kbd></td>
+                                    <td>Undo</td>
+                                </tr>
+                                <tr>
+                                    <td><kbd>Ctrl</kbd> + <kbd>Y</kbd></td>
+                                    <td>Redo</td>
+                                </tr>
+                                <tr>
+                                    <td><kbd>Ctrl</kbd> + <kbd>F</kbd></td>
+                                    <td>Find in justifications</td>
+                                </tr>
+                                <tr>
+                                    <td><kbd>F2</kbd></td>
+                                    <td>Edit selected cell</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="my-footer py-3 mt-auto">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item">
+                <a href="/" class="nav-link px-2 text-body-secondary">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="/waiting-list" class="nav-link px-2 text-body-secondary">Join Waiting List</a>
+            </li>
+            <li class="nav-item">
+                <a href="/documentation" class="nav-link px-2 text-body-secondary">Documentation</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://discord.gg/SZMNea5s" class="nav-link px-2 text-body-secondary">Feedback</a>
+            </li>
+        </ul>
+        <p class="text-center">© 2025 Mappy Intelligence</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active state in sidebar
+                    document.querySelectorAll('.doc-sidebar .list-group-item').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+            });
+        });
+        
+        // Highlight active section on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.help-section');
+            const navItems = document.querySelectorAll('.doc-sidebar .list-group-item');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                const sectionHeight = section.offsetHeight;
+                
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    currentSection = '#' + section.getAttribute('id');
+                }
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === currentSection) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+    
+    <style>
+        /* Documentation specific styles */
+        .documentation-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--text-light);
+        }
+        
+        .documentation-content {
+            background-color: #ffffff;
+        }
+        
+        .help-section {
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .help-section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .help-icon-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        
+        .help-icon {
+            color: white;
+        }
+        
+        .help-section h2 {
+            margin: 0;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+        
+        .help-content {
+            padding-left: 55px;
+        }
+        
+        .help-content h3 {
+            font-size: 1.3rem;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+        
+        .help-content h3:first-child {
+            margin-top: 0;
+        }
+        
+        .help-content p, .help-content li {
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .help-content ul {
+            margin-bottom: 20px;
+        }
+        
+        .doc-sidebar .list-group-item {
+            border-radius: 0;
+            border-left: 3px solid transparent;
+        }
+        
+        .doc-sidebar .list-group-item.active {
+            background-color: rgba(26, 115, 232, 0.1);
+            color: var(--primary-dark);
+            border-left: 3px solid var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .doc-sidebar .list-group-item:hover {
+            background-color: rgba(26, 115, 232, 0.05);
+        }
+        
+        kbd {
+            display: inline-block;
+            padding: 3px 6px;
+            font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-size: 0.9em;
+            color: #444;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+        
+        @media (max-width: 991px) {
+            .doc-sidebar {
+                position: static !important;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</body>
+</html>
