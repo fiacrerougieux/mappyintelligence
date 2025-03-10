@@ -48,6 +48,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="documentation.html">Documentation</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="release-notes.html">Changelog</a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav ml-auto mb-2 mb-lg-0 secondary-nav">
                     <li class="nav-item social-item">
@@ -129,48 +132,119 @@
     </section>
 
     <section class="faq">
-        <h2 class="faq-title">Frequently Asked Questions</h2>
-        <div class="accordion">
+        <h2 class="faq-title">Why Curriculum Mapping Matters</h2>
+        <style>
+            .accordion-button:not(.collapsed) {
+                color: #ffffff;
+                background-color: var(--primary);
+                box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+            }
+            .accordion-button:focus {
+                border-color: var(--primary-light);
+                box-shadow: 0 0 0 0.25rem rgba(var(--primary-rgb), 0.25);
+            }
+            .accordion-button::after {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            }
+            .accordion-button:not(.collapsed)::after {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            }
+            .curriculum-images {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+                margin: 30px 0;
+            }
+            .curriculum-image {
+                max-width: 45%;
+                border-radius: 8px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+            .curriculum-image:hover {
+                transform: translateY(-5px);
+            }
+            @media (max-width: 768px) {
+                .curriculum-image {
+                    max-width: 90%;
+                }
+            }
+        </style>
+        
+        <div class="curriculum-images">
+            <img src="curriculum-heatmap.png" alt="Curriculum Competency Heatmap" class="curriculum-image">
+            <img src="curriculum-dashboard.png" alt="Curriculum Analytics Dashboard" class="curriculum-image">
+        </div>
+        
+        <div class="accordion" id="curriculumAccordion">
             <div class="accordion-item">
-                <h3 id="headingOne-1-header" class="accordion-header">What are the system requirements? <span class="accordion-toggle">+</span></h3>
-                <div id="headingOne-1-content" class="accordion-content" style="display: none;">
-                    <div class="faq-content">
-                        <p><strong>OS:</strong> Windows 10/11, macOS, Linux</p>
-                        <p><strong>RAM:</strong> 4GB minimum</p>
-                        <p><strong>Storage:</strong> 500MB free space</p>
-                        <p>Mappy is built with Electron and runs on most modern operating systems.</p>
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        How does mapping improve curriculum alignment?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#curriculumAccordion">
+                    <div class="accordion-body">
+                        <p><strong>Stay on track with standards</strong> - See exactly how your courses align with the standards that matter to your institution. No more guesswork about whether you're hitting the mark!</p>
+                        <p><strong>Create a logical learning journey</strong> - Build connections between grade levels so students experience a smooth progression, while keeping content consistent across parallel courses.</p>
+                        <p><strong>Spot the missing pieces</strong> - Easily identify gaps in your curriculum and remove redundant content that wastes valuable teaching time, making your curriculum more efficient and effective.</p>
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
-                <h3 id="headingTwo-1-header" class="accordion-header">What file formats are supported? <span class="accordion-toggle">+</span></h3>
-                <div id="headingTwo-1-content" class="accordion-content" style="display: none;">
-                    <div class="faq-content">
-                        <p>Mappy accepts CSV and XLSX files for data import and can export to CSV or JSON formats. Your data should have courses as rows, competencies as columns, and justification text in cells.</p>
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How does mapping identify curriculum gaps?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#curriculumAccordion">
+                    <div class="accordion-body">
+                        <p><strong>Boost student success</strong> - Connect your teaching methods directly to learning goals so students are better prepared and achieve more. It's like giving students a clearer path to success!</p>
+                        <p><strong>Break down classroom walls</strong> - Create opportunities for teachers to share ideas, resources, and strategies across subjects and grades, building a more unified learning experience.</p>
+                        <p><strong>Show your work with pride</strong> - Make it easy for everyone (parents, administrators, and accreditors) to see what you're teaching and why, building confidence in your curriculum.</p>
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
-                <h3 id="headingThree-1-header" class="accordion-header">How do I edit justification text? <span class="accordion-toggle">+</span></h3>
-                <div id="headingThree-1-content" class="accordion-content" style="display: none;">
-                    <div class="faq-content">
-                        <p>In Single Course View, select a course from the dropdown to see all its competencies. Click on a justification cell to edit the content directly in the application. After editing, click "Save" to preserve your changes.</p>
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        How does mapping improve student outcomes?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#curriculumAccordion">
+                    <div class="accordion-body">
+                        <p><strong>Make assessments that really count</strong> - Create tests and projects that truly measure what matters, giving you meaningful insights into student progress and mastery.</p>
+                        <p><strong>Put resources where they matter most</strong> - Spend your budget, time, and energy on the right materials, technology, and training based on actual curriculum needs.</p>
+                        <p><strong>Ace your accreditation</strong> - Breeze through accreditation reviews with clear evidence that your curriculum meets all requirements, saving time and reducing stress.</p>
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
-                <h3 id="headingFour-1-header" class="accordion-header">Is internet access required? <span class="accordion-toggle">+</span></h3>
-                <div id="headingFour-1-content" class="accordion-content" style="display: none;">
-                    <div class="faq-content">
-                        <p>No, Mappy works completely offline. Internet access is only needed for downloading updates or accessing online documentation.</p>
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        How does mapping foster educator collaboration?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#curriculumAccordion">
+                    <div class="accordion-body">
+                        <p><strong>Stay fresh and relevant</strong> - Keep your curriculum up-to-date with changing standards, trends, and student needs through regular, data-driven reviews that make adaptation easier.</p>
+                        <p><strong>Connect the learning dots</strong> - Find natural bridges between subjects, helping students apply skills like critical thinking and writing across different classes for a more connected learning experience.</p>
+                        <p><strong>See the big picture</strong> - Get a bird's-eye view of how skills and knowledge build across years, making it easier to plan ahead and prepare students for future success.</p>
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
-                <h3 id="headingFive-1-header" class="accordion-header">How can I contribute to Mappy? <span class="accordion-toggle">+</span></h3>
-                <div id="headingFive-1-content" class="accordion-content" style="display: none;">
-                    <div class="faq-content">
-                        <p>You can contribute to Mappy Intelligence by reporting issues, suggesting features, or providing feedback through our <a href="https://discord.gg/SZMNea5s">Discord community</a>.</p>
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        How does mapping support institutional goals?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#curriculumAccordion">
+                    <div class="accordion-body">
+                        <p><strong>Get everyone on the same page</strong> - Make it easier for teachers, administrators, and stakeholders to talk about curriculum goals and progress with a shared visual language.</p>
+                        <p><strong>Help students see their path forward</strong> - Show students how today's learning connects to tomorrow's goals, boosting their motivation and investment in their education journey.</p>
+                        <p><strong>Supercharge your teaching team</strong> - Pinpoint exactly where teachers could benefit from additional training, focusing professional development where it will have the biggest impact.</p>
                     </div>
                 </div>
             </div>
@@ -181,181 +255,59 @@
         <div class="customization-content">
             <h2 class="customization-title">Customize Your Analysis</h2>
             <p class="customization-description">
-                Mappy offers flexible visualization options to suit your specific curriculum analysis needs. Filter by competency categories, adjust color schemes, and generate focused reports for different audiences and purposes.
+                Mappy offers flexible visualization options to suit your specific curriculum analysis needs. Filter by competency categories, adjust color schemes, weight analysis by assessment items, and generate focused reports for different audiences and purposes.
             </p>
         </div>
         <div class="customization-images">
-            <img src="settings-screenshot.png" alt="Settings Screen" class="customization-image-1">
-            <img src="custom-view-screenshot.png" alt="Custom View" class="customization-image-2">
+            <img src="assessment-weighting.png" alt="Assessment Weighting Analysis" class="customization-image-1">
+            <img src="color-scheme-customization.png" alt="Color Scheme Customization" class="customization-image-2">
         </div>
-    </section>
-
-    <section class="why-circular-section">
-        <div class="container">
-            <h2 class="why-title">Why Curriculum Mapping Matters</h2>
-            <div class="why-container">
-                <div class="why-center">
-                    <div class="why-center-content">
-                        <i class="fas fa-lightbulb center-icon"></i>
-                        <h3>Transform Your Curriculum</h3>
-                        <p>Click on the surrounding elements to learn how curriculum mapping creates meaningful educational experiences</p>
-                    </div>
-                </div>
-                <div class="why-items">
-                    <div class="why-item" data-reason="Alignment with Standards">
-                        <div class="why-item-inner">
-                            <i class="fas fa-award"></i>
-                            <span>Standards Alignment</span>
-                        </div>
-                        <div class="why-tooltip">
-                            <h4>Alignment with Standards</h4>
-                            <p>Ensures the curriculum meets state, national, or institutional standards, preparing students to achieve required benchmarks and outcomes.</p>
-                        </div>
-                    </div>
-                    <div class="why-item" data-reason="Vertical and Horizontal Coherence">
-                        <div class="why-item-inner">
-                            <i class="fas fa-sitemap"></i>
-                            <span>Curriculum Coherence</span>
-                        </div>
-                        <div class="why-tooltip">
-                            <h4>Vertical and Horizontal Coherence</h4>
-                            <p>Promotes logical progression of content across grade levels (vertical coherence) and consistency within the same grade or course (horizontal coherence).</p>
-                        </div>
-                    </div>
-                    <div class="why-item" data-reason="Identifying Gaps and Redundancies">
-                        <div class="why-item-inner">
-                            <i class="fas fa-search"></i>
-                            <span>Gap Analysis</span>
-                        </div>
-                        <div class="why-tooltip">
-                            <h4>Identifying Gaps and Redundancies</h4>
-                            <p>Highlights missing content or skills (gaps) and eliminates unnecessary repetition (redundancies) to optimize curriculum delivery.</p>
-                        </div>
-                    </div>
-                    <div class="why-item" data-reason="Improving Student Learning Outcomes">
-                        <div class="why-item-inner">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>Better Outcomes</span>
-                        </div>
-                        <div class="why-tooltip">
-                            <h4>Improving Student Learning Outcomes</h4>
-                            <p>Aligns teaching methods and assessments with learning objectives, leading to better student preparedness and achievement.</p>
-                        </div>
-                    </div>
-                    <div class="why-item" data-reason="Collaboration Among Educators">
-                        <div class="why-item-inner">
-                            <i class="fas fa-users"></i>
-                            <span>Educator Collaboration</span>
-                        </div>
-                        <div class="why-tooltip">
-                            <h4>Collaboration Among Educators</h4>
-                            <p>Facilitates teamwork among teachers to align strategies, share resources, and create a cohesive educational experience.</p>
-                        </div>
-                    </div>
-                    <div class="why-item" data-reason="Transparency and Accountability">
-                        <div class="why-item-inner">
-                            <i class="fas fa-clipboard-check"></i>
-                            <span>Transparency</span>
-                        </div>
-                        <div class="why-tooltip">
-                            <h4>Transparency and Accountability</h4>
-                            <p>Provides a clear record of what is being taught, increasing accountability to stakeholders (parents, administrators, regulators) and enhancing trust.</p>
-                        </div>
-                    </div>
-                    <div class="why-item" data-reason="Enhanced Assessment Practices">
-                        <div class="why-item-inner">
-                            <i class="fas fa-tasks"></i>
-                            <span>Better Assessment</span>
-                        </div>
-                        <div class="why-tooltip">
-                            <h4>Enhanced Assessment Practices</h4>
-                            <p>Aligns assessments with curriculum goals to ensure validity and meaningful measurement of student progress.</p>
-                        </div>
-                    </div>
-                    <div class="why-item" data-reason="Resource Allocation">
-                        <div class="why-item-inner">
-                            <i class="fas fa-puzzle-piece"></i>
-                            <span>Resource Allocation</span>
-                        </div>
-                        <div class="why-tooltip">
-                            <h4>Resource Allocation</h4>
-                            <p>Guides efficient distribution of teaching materials, technology, and professional development resources to strengthen curriculum delivery.</p>
-                        </div>
-                    </div>
-                    <div class="why-item" data-reason="Supporting Accreditation">
-                        <div class="why-item-inner">
-                            <i class="fas fa-certificate"></i>
-                            <span>Accreditation</span>
-                        </div>
-                        <div class="why-tooltip">
-                            <h4>Supporting Accreditation</h4>
-                            <p>Provides evidence of curriculum alignment and planning to meet accreditation and compliance requirements.</p>
-                        </div>
-                    </div>
-                    <div class="why-item" data-reason="Continuous Improvement">
-                        <div class="why-item-inner">
-                            <i class="fas fa-sync-alt"></i>
-                            <span>Continuous Improvement</span>
-                        </div>
-                        <div class="why-tooltip">
-                            <h4>Continuous Improvement</h4>
-                            <p>Serves as a foundation for regular curriculum reviews, enabling schools to adapt to changing standards, educational trends, and student needs.</p>
-                        </div>
-                    </div>
-                    <div class="why-item" data-reason="Interdisciplinary Connections">
-                        <div class="why-item-inner">
-                            <i class="fas fa-link"></i>
-                            <span>Cross-Discipline Links</span>
-                        </div>
-                        <div class="why-tooltip">
-                            <h4>Interdisciplinary Connections</h4>
-                            <p>Encourages integration of skills (e.g., critical thinking, writing) across subjects, fostering holistic learning experiences.</p>
-                        </div>
-                    </div>
-                    <div class="why-item" data-reason="Long-Term Planning">
-                        <div class="why-item-inner">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>Long-Term Planning</span>
-                        </div>
-                        <div class="why-tooltip">
-                            <h4>Long-Term Planning</h4>
-                            <p>Offers a comprehensive overview of curriculum progression, enabling tracking of student growth and preparation for future learning stages.</p>
-                        </div>
-                    </div>
-                    <div class="why-item" data-reason="Improved Communication">
-                        <div class="why-item-inner">
-                            <i class="fas fa-comments"></i>
-                            <span>Better Communication</span>
-                        </div>
-                        <div class="why-tooltip">
-                            <h4>Improved Communication</h4>
-                            <p>Enhances communication between teachers, administrators, and stakeholders about curriculum goals and progress.</p>
-                        </div>
-                    </div>
-                    <div class="why-item" data-reason="Student Engagement">
-                        <div class="why-item-inner">
-                            <i class="fas fa-hand-pointer"></i>
-                            <span>Student Engagement</span>
-                        </div>
-                        <div class="why-tooltip">
-                            <h4>Student Engagement</h4>
-                            <p>Clarifies learning paths for students, helping them connect coursework to future goals and fostering ownership of their education.</p>
-                        </div>
-                    </div>
-                    <div class="why-item" data-reason="Professional Development">
-                        <div class="why-item-inner">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                            <span>Professional Growth</span>
-                        </div>
-                        <div class="why-tooltip">
-                            <h4>Professional Development</h4>
-                            <p>Identifies areas where educators need additional training, supporting their growth and improving instructional practices.</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="customization-features">
+            <div class="feature-item">
+                <h3><i class="fas fa-sliders-h"></i> Assessment Weighting</h3>
+                <p>Prioritize curriculum analysis based on assessment importance, distinguishing between formative exercises and high-stakes evaluations.</p>
+            </div>
+            <div class="feature-item">
+                <h3><i class="fas fa-palette"></i> Visual Customization</h3>
+                <p>Personalize color schemes for different reporting needs, making your curriculum visualizations both accessible and meaningful.</p>
             </div>
         </div>
+        <style>
+            .customization-features {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 30px;
+                margin-top: 40px;
+            }
+            .feature-item {
+                flex: 1;
+                min-width: 280px;
+                max-width: 500px;
+                background-color: #f8f9fa;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+                transition: transform 0.3s ease;
+            }
+            .feature-item:hover {
+                transform: translateY(-5px);
+            }
+            .feature-item h3 {
+                color: var(--primary);
+                font-size: 1.3rem;
+                margin-bottom: 15px;
+            }
+            .feature-item i {
+                margin-right: 8px;
+            }
+            .feature-item p {
+                color: var(--text-dark);
+                line-height: 1.5;
+            }
+        </style>
     </section>
+
 
     <section class="call-to-action">
         <h2 class="cta-title">Start Visualizing Today</h2>
@@ -379,131 +331,12 @@
                 <a href="documentation.html" class="nav-link px-2 text-body-secondary">Documentation</a>
             </li>
             <li class="nav-item">
-                <a href="https://discord.gg/SZMNea5s" class="nav-link px-2 text-body-secondary">Feedback</a>
+                <a href="release-notes.html" class="nav-link px-2 text-body-secondary">Changelog</a>
             </li>
         </ul>
         <p class="text-center">© 2025 Mappy Intelligence</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script>
-        // Simple accordion functionality
-        document.querySelectorAll('.accordion-header').forEach(header => {
-            header.addEventListener('click', () => {
-                const content = document.getElementById(header.id.replace('-header', '-content'));
-                if (content.style.display === 'none') {
-                    content.style.display = 'block';
-                    header.querySelector('.accordion-toggle').textContent = '-';
-                } else {
-                    content.style.display = 'none';
-                    header.querySelector('.accordion-toggle').textContent = '+';
-                }
-            });
-        });
-
-        // Why section interactive functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mobile device tooltip handling
-            if (window.innerWidth <= 768) {
-                document.querySelectorAll('.why-item').forEach(item => {
-                    item.addEventListener('click', function() {
-                        const reason = this.getAttribute('data-reason');
-                        const tooltip = this.querySelector('.why-tooltip');
-                        
-                        // Create a modal
-                        const modal = document.createElement('div');
-                        modal.className = 'why-modal';
-                        modal.innerHTML = tooltip.innerHTML;
-                        
-                        // Add close button
-                        const closeBtn = document.createElement('button');
-                        closeBtn.innerText = '×';
-                        closeBtn.className = 'modal-close';
-                        modal.appendChild(closeBtn);
-                        
-                        // Add modal to body
-                        document.body.appendChild(modal);
-                        
-                        // Show modal
-                        setTimeout(() => {
-                            modal.classList.add('show');
-                        }, 10);
-                        
-                        // Close on button click
-                        closeBtn.addEventListener('click', function() {
-                            modal.classList.remove('show');
-                            setTimeout(() => {
-                                document.body.removeChild(modal);
-                            }, 300);
-                        });
-                        
-                        // Close on outside click
-                        modal.addEventListener('click', function(e) {
-                            if (e.target === modal) {
-                                modal.classList.remove('show');
-                                setTimeout(() => {
-                                    document.body.removeChild(modal);
-                                }, 300);
-                            }
-                        });
-                    });
-                });
-                
-                // Add modal styles
-                const style = document.createElement('style');
-                style.textContent = `
-                    .why-modal {
-                        position: fixed;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-color: rgba(0,0,0,0.5);
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        z-index: 1000;
-                        opacity: 0;
-                        visibility: hidden;
-                        transition: opacity 0.3s ease, visibility 0.3s ease;
-                    }
-                    .why-modal.show {
-                        opacity: 1;
-                        visibility: visible;
-                    }
-                    .why-modal h4, .why-modal p {
-                        color: var(--text-dark);
-                        margin: 0 0 15px;
-                    }
-                    .why-modal h4 {
-                        font-size: 1.3rem;
-                    }
-                    .why-modal p {
-                        font-size: 1rem;
-                    }
-                    .modal-close {
-                        position: absolute;
-                        top: 10px;
-                        right: 10px;
-                        background: none;
-                        border: none;
-                        font-size: 24px;
-                        cursor: pointer;
-                        color: var(--primary-dark);
-                    }
-                    .why-modal {
-                        padding: 25px;
-                        background: white;
-                        border-radius: 8px;
-                        width: 85%;
-                        max-width: 350px;
-                        position: relative;
-                        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-                    }
-                `;
-                document.head.appendChild(style);
-            }
-        });
-    </script>
 </body>
 </html>
