@@ -47,6 +47,12 @@ body {
     margin-right: 10px;
 }
 
+.brand-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
 .brand-name {
     font-size: 1.5rem;
     font-weight: 700;
