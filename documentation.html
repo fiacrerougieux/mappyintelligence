@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpeg" href="icon.jpg">
     <title>Documentation - Mappy Intelligence</title>
     <!-- Primary Meta Tags -->
     <meta name="title" content="Documentation - Mappy Intelligence">
@@ -16,7 +17,7 @@
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <div class="brand-container">
-                    <img src="logo-ultra.png" class="brand-logo" alt="Mappy Logo">
+                    <img src="icon.jpg" class="brand-logo" alt="Mappy Logo">
                     <span class="brand-text">Mappy</span>
                 </div>
             </a>
@@ -67,10 +68,8 @@
                         <div class="list-group">
                             <a href="#data-management" class="list-group-item list-group-item-action">1. Data Management</a>
                             <a href="#visualization" class="list-group-item list-group-item-action">2. Visualization Options</a>
-                            <a href="#analysis" class="list-group-item list-group-item-action">3. Analysis Tools</a>
-                            <a href="#export" class="list-group-item list-group-item-action">4. Exporting Results</a>
-                            <a href="#settings" class="list-group-item list-group-item-action">5. Settings & Preferences</a>
-                            <a href="#keyboard-shortcuts" class="list-group-item list-group-item-action">6. Keyboard Shortcuts</a>
+                            <a href="#editing" class="list-group-item list-group-item-action">3. Editing Competencies</a>
+                            <a href="#advanced" class="list-group-item list-group-item-action">4. Advanced Features</a>
                         </div>
                     </div>
                 </div>
@@ -82,35 +81,30 @@
                                     <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
                                 </svg>
                             </div>
-                            <h2>1. Data Management</h2>
+                            <h3>1. Data Management</h3>
                         </div>
                         <div class="help-content">
-                            <h3>Importing Data</h3>
+                            <h4>Importing Data</h4>
                             <p>Mappy analyzes Excel (.xlsx) files where each row represents a course and its competency coverage:</p>
                             <ul>
                                 <li>Select <strong>Open File</strong> from the sidebar to import your Excel file</li>
-                                <li>Any non-empty text in a competency cell represents coverage and serves as justification text</li>
-                                <li>For optimal visualization, include course codes in the first column</li>
-                                <li>Mappy will automatically load template.xlsx on startup, if available</li>
+                                <li>Use <strong>Pre-filled</strong> to access template-based frameworks for quicker setup</li>
+                                <li>Any non-empty text in a competency cell represents coverage and serves as justification</li>
+                                <li>Required columns: aspect (competency name), course_code (identifier)</li>
+                                <li>Optional columns: term, year for progression visualization</li>
                             </ul>
                             
-                            <h3>Saving Changes</h3>
-                            <p>After modifying competency justifications:</p>
+                            <h4>Data Management</h4>
+                            <p>Work with your curriculum data efficiently:</p>
                             <ul>
-                                <li>Select <strong>Save File</strong> to preserve your modifications for future sessions</li>
-                                <li>Choose from Excel (.xlsx), JSON (.json), or CSV (.csv) formats for your data</li>
-                                <li>Your data will be exported with all changes included</li>
+                                <li>Use spreadsheet view for bulk editing with search capability</li>
+                                <li>Create custom competency frameworks with the framework manager</li>
+                                <li>Maintain multiple data sheets with independent visualizations</li>
+                                <li>Select <strong>Save File</strong> to export in Excel (.xlsx), JSON (.json), or CSV (.csv) formats</li>
                             </ul>
-
-                            <h3>Data Structure</h3>
-                            <p>For optimal results, structure your data as follows:</p>
-                            <ul>
-                                <li>First column: Course codes or unique identifiers</li>
-                                <li>Second column: Course names or descriptions</li>
-                                <li>Subsequent columns: One column per competency</li>
-                                <li>Header row: Competency names or codes</li>
-                                <li>Cell content: Justification text explaining how the course addresses the competency</li>
-                            </ul>
+                            
+                            <h4>Sheet Management</h4>
+                            <p>Navigate between different data sheets using the sheet selector bar. Each sheet maintains its own visualization settings and selected competencies.</p>
                         </div>
                     </div>
           
@@ -125,239 +119,137 @@
                                     <line x1="3" y1="15" x2="21" y2="15" />
                                 </svg>
                             </div>
-                            <h2>2. Visualization Options</h2>
+                            <h3>2. Visualization Options</h3>
                         </div>
                         <div class="help-content">
-                            <h3>Radar Plots</h3>
-                            <p>Radar plots provide a comprehensive view of competency coverage for individual courses:</p>
+                            <p>Mappy offers multiple visualization methods to analyze your curriculum data:</p>
+                            
+                            <h4>Radar Charts</h4>
+                            <p>Displays competency distribution across courses with each axis representing a competency area. Features include weighted analysis with adaptive scaling and custom color selection via grid picker.</p>
+                            
+                            <h4>Binary Heatmaps</h4>
+                            <p>Shows presence/absence of competencies across all courses using a color-coded matrix with standardized Viridis colorscale. Includes scroll indicators for large assessment datasets.</p>
+                            
+                            <h4>Cumulative Heatmaps</h4>
+                            <p>Displays the progressive competency coverage across the curriculum with independent dropdown selections and adaptive bottom margins for better display.</p>
+                            
+                            <h4>Educational Taxonomies</h4>
+                            <p>Visualizes educational frameworks with precise mathematical models:</p>
                             <ul>
-                                <li>Select a course from the dropdown to visualize its competency coverage</li>
-                                <li>Hover over radar points to see detailed justification text</li>
-                                <li>Toggle between absolute values and normalized percentages</li>
-                                <li>Compare multiple courses by enabling the "Multi-course comparison" option</li>
+                                <li>Miller's Pyramid with consistent slopes and wider base</li>
+                                <li>CDIO Framework with mathematically precise proportions</li>
+                                <li>Dreyfus Model for skill acquisition visualization</li>
+                                <li>Krathwohl's Affective Domain taxonomy support</li>
+                                <li>Dynamic assessment text formatting with proper line wrapping</li>
                             </ul>
                             
-                            <h3>Heatmaps</h3>
-                            <p>Heatmaps offer a bird's-eye view of competency coverage across all courses:</p>
+                            <h4>Elective Path Visualization</h4>
+                            <p>Tracks competency progression over time with position-based x-axis for clear navigation and fill-between-curves styling for better readability.</p>
+                            
+                            <h4>Term/Year Layout</h4>
+                            <p>Organizes courses by academic terms and years for a chronological view of the curriculum:</p>
                             <ul>
-                                <li><strong>Binary Heatmap:</strong> Shows presence or absence of each competency</li>
-                                <li><strong>Intensity Heatmap:</strong> Displays the strength of coverage based on justification length</li>
-                                <li>Click on any cell to view the full justification text</li>
-                                <li>Sort courses by program sequence for progression analysis</li>
-                            </ul>
-
-                            <h3>Customizing Visualizations</h3>
-                            <p>Tailor visualizations to your specific needs:</p>
-                            <ul>
-                                <li>Adjust color schemes in the Settings panel</li>
-                                <li>Filter by competency groups or individual competencies</li>
-                                <li>Zoom in/out on complex visualizations</li>
-                                <li>Toggle labels and legends for cleaner presentations</li>
+                                <li>Use one empty row in your spreadsheet to separate terms</li>
+                                <li>Use two consecutive empty rows to indicate year boundaries</li>
+                                <li>This provides a temporal progression view of competency development</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div id="analysis" class="help-section mb-5">
+                    <div id="editing" class="help-section mb-5">
                         <div class="help-section-header">
                             <div class="help-icon-container">
                                 <svg class="help-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                    <path d="M12 20h9"></path>
+                                    <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
                                 </svg>
                             </div>
-                            <h2>3. Analysis Tools</h2>
+                            <h3>3. Editing Competencies</h3>
                         </div>
                         <div class="help-content">
-                            <h3>Gap Analysis</h3>
-                            <p>Identify gaps in your curriculum coverage:</p>
-                            <ul>
-                                <li>The <strong>Curriculum Report</strong> highlights competencies with low or no coverage</li>
-                                <li>Set coverage thresholds in Settings to customize what constitutes a "gap"</li>
-                                <li>Filter by program year to identify progression issues</li>
-                            </ul>
+                            <p>Modify competency data using multiple methods:</p>
+                            <h4>Direct Editing</h4>
+                            <ol>
+                                <li>Click on any cell in the heatmap visualizations to open the editing dialog</li>
+                                <li>Enter or modify the justification text that explains how the competency is addressed</li>
+                                <li>Click <strong>Save</strong> to apply your changes to the visualization</li>
+                            </ol>
                             
-                            <h3>Redundancy Detection</h3>
-                            <p>Optimize your curriculum by identifying redundant coverage:</p>
-                            <ul>
-                                <li>The <strong>Overlap Report</strong> shows competencies covered by multiple courses</li>
-                                <li>View courses with similar coverage patterns</li>
-                                <li>Use this information to streamline curriculum design</li>
-                            </ul>
-
-                            <h3>Progression Analysis</h3>
-                            <p>Ensure competencies develop appropriately throughout a program:</p>
-                            <ul>
-                                <li>Arrange courses in sequence to visualize competency progression</li>
-                                <li>Identify competencies that are introduced but not reinforced</li>
-                                <li>Track development from introductory to mastery levels</li>
-                            </ul>
+                            <h4>Spreadsheet View</h4>
+                            <ol>
+                                <li>Click the <strong>Edit Data</strong> button in the sidebar</li>
+                                <li>Use the spreadsheet interface to make bulk changes</li>
+                                <li>Use the search bar to quickly find specific content</li>
+                                <li>Click <strong>Save Changes</strong> to apply all modifications</li>
+                            </ol>
+                            
+                            <h4>Framework Management</h4>
+                            <p>Create and customize competency frameworks through the framework manager for template-based analysis.</p>
+                            
+                            <p>Remember to use <strong>Save File</strong> after editing to persist your changes to disk.</p>
                         </div>
                     </div>
 
-                    <div id="export" class="help-section mb-5">
+                    <div id="advanced" class="help-section mb-5">
                         <div class="help-section-header">
                             <div class="help-icon-container">
                                 <svg class="help-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                    <polyline points="7 10 12 15 17 10"></polyline>
-                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                    <path d="M12,2 C17.5,2 22,6.5 22,12 C22,17.5 17.5,22 12,22 C6.5,22 2,17.5 2,12 C2,6.5 6.5,2 12,2 Z" />
+                                    <path d="M12 16v-4M12 8h.01" />
                                 </svg>
                             </div>
-                            <h2>4. Exporting Results</h2>
+                            <h3>4. Advanced Features</h3>
                         </div>
                         <div class="help-content">
-                            <h3>Visualization Export</h3>
-                            <p>Share your visualizations with stakeholders:</p>
+                            <h4>Visualization Export</h4>
+                            <p>Export your visualizations for reports and presentations:</p>
                             <ul>
-                                <li>Use the <strong>Export Image</strong> button to save plots as PNG, JPG, or SVG</li>
-                                <li>Copy to clipboard for easy pasting into presentations</li>
-                                <li>Export multiple visualizations at once using the batch export option</li>
+                                <li>Use the <strong>DL All</strong> button to download all visualizations as image files</li>
+                                <li>Generate comprehensive PDF reports with the <strong>PDF</strong> button</li>
+                                <li>Export in CSV, XLSX, or JSON formats for further analysis</li>
                             </ul>
                             
-                            <h3>Reports Generation</h3>
-                            <p>Create comprehensive reports for accreditation or review:</p>
+                            <h4>Multi-Sheet Support</h4>
+                            <p>Navigate between different data sheets using the sheet selector bar below the visualization toolbar. Each sheet can contain different courses or competency frameworks.</p>
+                            
+                            <h4>Settings & Preferences</h4>
+                            <p>Access the Settings panel from the status bar to customize:</p>
                             <ul>
-                                <li>Generate a complete <strong>Curriculum Report</strong> with all visualizations and analysis</li>
-                                <li>Export to PDF or HTML formats</li>
-                                <li>Customize reports to include only selected sections</li>
-                            </ul>
-
-                            <h3>Data Export</h3>
-                            <p>Export your processed data for use in other tools:</p>
-                            <ul>
-                                <li>Save in Excel, CSV, or JSON formats</li>
-                                <li>Export summary statistics for further analysis</li>
-                                <li>Generate data tables that can be imported into other visualization tools</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div id="settings" class="help-section mb-5">
-                        <div class="help-section-header">
-                            <div class="help-icon-container">
-                                <svg class="help-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="3"></circle>
-                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-                                </svg>
-                            </div>
-                            <h2>5. Settings & Preferences</h2>
-                        </div>
-                        <div class="help-content">
-                            <h3>Appearance Settings</h3>
-                            <p>Customize the application's look and feel:</p>
-                            <ul>
-                                <li>Choose between light and dark themes</li>
-                                <li>Select from predefined color palettes or create your own</li>
-                                <li>Adjust font sizes for better readability</li>
-                                <li>Configure default chart dimensions</li>
+                                <li>Appearance: Theme, color palette, font size, and chart dimensions</li>
+                                <li>Data: Export format preferences and analysis thresholds</li>
+                                <li>Behavior: Startup options, auto-save, and default visualization type</li>
                             </ul>
                             
-                            <h3>Data Preferences</h3>
-                            <p>Configure how Mappy processes your data:</p>
+                            <h4>Framework Analysis</h4>
+                            <p>Analyze curriculum against various educational frameworks:</p>
                             <ul>
-                                <li>Set default import/export formats</li>
-                                <li>Configure column mappings for non-standard data</li>
-                                <li>Define competency groupings for organizational purposes</li>
-                                <li>Set threshold values for gap analysis</li>
+                                <li>Miller's Pyramid for clinical skill development</li>
+                                <li>CDIO Framework for engineering education</li>
+                                <li>Dreyfus Model for skill acquisition</li>
+                                <li>Krathwohl's Affective Domain taxonomy</li>
+                                <li>Professional standards (AMC, APS, EA, SDG, etc.)</li>
                             </ul>
-
-                            <h3>Application Behavior</h3>
-                            <p>Control how the application works:</p>
-                            <ul>
-                                <li>Enable/disable auto-save functionality</li>
-                                <li>Configure startup behavior</li>
-                                <li>Set default visualization types</li>
-                                <li>Manage recent files list</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div id="keyboard-shortcuts" class="help-section mb-5">
-                        <div class="help-section-header">
-                            <div class="help-icon-container">
-                                <svg class="help-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect>
-                                    <path d="M6 8h.01"></path>
-                                    <path d="M10 8h.01"></path>
-                                    <path d="M14 8h.01"></path>
-                                    <path d="M18 8h.01"></path>
-                                    <path d="M8 12h.01"></path>
-                                    <path d="M12 12h.01"></path>
-                                    <path d="M16 12h.01"></path>
-                                    <path d="M7 16h10"></path>
-                                </svg>
-                            </div>
-                            <h2>6. Keyboard Shortcuts</h2>
-                        </div>
-                        <div class="help-content">
-                            <h3>File Operations</h3>
-                            <table class="table table-bordered">
-                                <tr>
-                                    <td width="30%"><kbd>Ctrl</kbd> + <kbd>O</kbd></td>
-                                    <td>Open File</td>
-                                </tr>
-                                <tr>
-                                    <td><kbd>Ctrl</kbd> + <kbd>S</kbd></td>
-                                    <td>Save File</td>
-                                </tr>
-                                <tr>
-                                    <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd></td>
-                                    <td>Save As...</td>
-                                </tr>
-                                <tr>
-                                    <td><kbd>Ctrl</kbd> + <kbd>E</kbd></td>
-                                    <td>Export Current View</td>
-                                </tr>
-                            </table>
                             
-                            <h3>Navigation</h3>
-                            <table class="table table-bordered">
-                                <tr>
-                                    <td width="30%"><kbd>Ctrl</kbd> + <kbd>1</kbd> to <kbd>5</kbd></td>
-                                    <td>Switch between visualization tabs</td>
-                                </tr>
-                                <tr>
-                                    <td><kbd>Ctrl</kbd> + <kbd>Tab</kbd></td>
-                                    <td>Next tab</td>
-                                </tr>
-                                <tr>
-                                    <td><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd></td>
-                                    <td>Previous tab</td>
-                                </tr>
-                                <tr>
-                                    <td><kbd>F11</kbd></td>
-                                    <td>Toggle fullscreen mode</td>
-                                </tr>
-                            </table>
-
-                            <h3>Editing</h3>
-                            <table class="table table-bordered">
-                                <tr>
-                                    <td width="30%"><kbd>Ctrl</kbd> + <kbd>Z</kbd></td>
-                                    <td>Undo</td>
-                                </tr>
-                                <tr>
-                                    <td><kbd>Ctrl</kbd> + <kbd>Y</kbd></td>
-                                    <td>Redo</td>
-                                </tr>
-                                <tr>
-                                    <td><kbd>Ctrl</kbd> + <kbd>F</kbd></td>
-                                    <td>Find in justifications</td>
-                                </tr>
-                                <tr>
-                                    <td><kbd>F2</kbd></td>
-                                    <td>Edit selected cell</td>
-                                </tr>
-                            </table>
+                            <h4>Weighted Analysis</h4>
+                            <p>Enable weighted analysis with the <strong>Weight</strong> toggle button to factor in assessment weightings when analyzing competency coverage.</p>
                         </div>
                     </div>
+                    
+                    <div class="help-footer">
+                        <p>For additional support or to report issues, please contact your system administrator.</p>
+                        <p>&copy; 2025 Mappy Intelligence. All rights reserved.</p>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
 
     <footer class="my-footer py-3 mt-auto">
+        <div class="d-flex justify-content-center align-items-center mb-3">
+            <img src="icon.jpg" alt="Mappy Logo" class="footer-logo me-3">
+            <span class="footer-brand">Mappy Intelligence</span>
+        </div>
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
             <li class="nav-item">
                 <a href="index.html" class="nav-link px-2 text-body-secondary">Home</a>
@@ -370,9 +262,6 @@
             </li>
             <li class="nav-item">
                 <a href="release-notes.html" class="nav-link px-2 text-body-secondary">Changelog</a>
-            </li>
-            <li class="nav-item">
-                <a href="templates.html" class="nav-link px-2 text-body-secondary">Templates</a>
             </li>
         </ul>
         <p class="text-center">© 2025 Mappy Intelligence</p>
