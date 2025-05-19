@@ -35,7 +35,7 @@
                     <span class="brand-text">Mappy</span>
                 </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
@@ -236,6 +236,26 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        What can a curriculum map reveal?
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#curriculumAccordion">
+                    <div class="accordion-body">
+                        <p><strong>Analysis of the Curriculum Map:</strong> The map facilitates strategic curriculum enhancement by identifying patterns, strengths, and weaknesses. Key areas of focus include:</p>
+                        <ul>
+                            <li><strong>Gaps:</strong> Are there any essential learning outcomes that are not adequately addressed anywhere in the curriculum?</li>
+                            <li><strong>Redundancies:</strong> Is certain content or are specific skills being taught multiple times without clear purpose or progression?</li>
+                            <li><strong>Misalignments:</strong> Do teaching activities and assessments effectively support the stated learning outcomes? Is there a logical sequence and progression of learning across courses (vertical alignment) and consistency within courses or grade levels (horizontal alignment)?</li>
+                            <li><strong>Over/Under-utilization of Courses:</strong> Are core or required courses being appropriately utilized to develop key outcomes, or are some overburdened while others contribute little?</li>
+                            <li><strong>Opportunities for Enhancement:</strong> Where can interdisciplinary connections be strengthened, or innovative teaching methods be integrated?</li>
+                        </ul>
+                        <p><strong>Action Planning:</strong> Based on the findings of the map a plan may be drawn by your team which might include revising course content, developing new learning activities, introducing different assessment methods, adjusting the sequence of courses, or providing targeted professional development for faculty. The action plan should also include timelines and assign responsibilities for implementing the proposed changes.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -416,15 +436,16 @@
                 <div class="col-md-5 mb-4">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body p-4">
-                            <h3 class="card-title mb-3" style="color: var(--primary-color);">
-                                <i class="fas fa-file-excel me-2"></i> Pre-populated Templates
+                            <h3 class="card-title mb-3" style="color: var(--primary-color); display: flex; align-items: center;">
+                                <img src="mappify.png" alt="Mappify icon" style="max-height: 24px; margin-right: 8px;"> AI-Assisted Mapping with Mappify
                             </h3>
+                            <p style="font-size: 0.9rem; color: #555;">Our backend automated mapping engine, Mappify, can help kickstart your analysis using public course data. This optional feature complements, but doesn't replace, detailed human analysis.</p>
                             <ul class="list-unstyled">
-                                <li class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--primary-color);"></i> Start with our templates using public course data</li>
-                                <li class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--primary-color);"></i> Skip tedious initial data entry</li>
-                                <li class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--primary-color);"></i> Use as foundation for refined human analysis</li>
-                                <li class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--primary-color);"></i> Identify gaps in course documentation</li>
-                                <li class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--primary-color);"></i> Trigger improvements in course outlines</li>
+                                <li class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--primary-color);"></i> Leverage AI for initial mapping suggestions</li>
+                                <li class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--primary-color);"></i> Gain additional insights to complement human expertise</li>
+                                <li class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--primary-color);"></i> Use as a foundation for your team's detailed review</li>
+                                <li class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--primary-color);"></i> Identify potential gaps or areas for deeper investigation</li>
+                                <li class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--primary-color);"></i> Remember: Mapping is a process, and Mappify is one tool to support it.</li>
                             </ul>
                         </div>
                     </div>
@@ -434,7 +455,7 @@
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body p-4">
                             <h3 class="card-title mb-3" style="color: var(--primary-color);">
-                                <i class="fas fa-edit me-2"></i> Custom Data Entry
+                                <i class="fas fa-edit me-2"></i> Manual & Custom Data Entry
                             </h3>
                             <ul class="list-unstyled">
                                 <li class="mb-3"><i class="fas fa-check-circle me-2" style="color: var(--primary-color);"></i> Use any properly formatted Excel spreadsheet</li>
