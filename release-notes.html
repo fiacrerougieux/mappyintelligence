@@ -263,13 +263,192 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="version-timeline">
+
+                        <!-- 3.0.0 LATEST -->
                         <div class="timeline-item current">
                             <div class="version-badge">
                                 <span class="badge bg-primary">LATEST</span>
                             </div>
                             <div class="version-card">
                                 <div class="version-header">
-                                    <h2>Version 2.0.0</h2>
+                                    <h2>Version 3.0.0</h2>
+                                </div>
+                                <div class="version-content">
+                                    <ul>
+                                        <li><strong>CourseLoop Integration:</strong> Mappy now connects directly to
+                                            CourseLoop program data, enabling import of live curriculum structures
+                                            without manual export steps</li>
+                                        <li><strong>Versioned Program Snapshots:</strong> Programs are identified by
+                                            their CourseLoop <code>code@version</code> reference (e.g.
+                                            <code>3707@2026.09</code>), making every import traceable and reproducible
+                                        </li>
+                                        <li><strong>ECLIPS Subgraph Schema:</strong> Full alignment with the ECLIPS
+                                            subgraph format — containers, outcomes, courses and their relationships are
+                                            resolved automatically from the CourseLoop export</li>
+                                        <li><strong>Data Source Badge:</strong> Every session now displays whether data
+                                            was loaded from CourseLoop (ECLIPS) or entered manually, with the exact
+                                            program version shown in the header</li>
+                                        <li><strong>Deduplication Engine:</strong> Multi-version program nodes are
+                                            automatically detected and deduplicated, eliminating doubled SLO counts
+                                            caused by overlapping version edges</li>
+                                        <li><strong>Cloud Program Browser:</strong> Browse and load institutional
+                                            programs directly from the cloud without leaving the app — access is
+                                            controlled per user</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2.5.0 -->
+                        <div class="timeline-item">
+                            <div class="version-badge">
+                                <span class="badge bg-info">STABLE</span>
+                            </div>
+                            <div class="version-card">
+                                <div class="version-header">
+                                    <h2>Version 2.5.0 <small><span class="badge bg-info">STABLE</span></small></h2>
+                                </div>
+                                <div class="version-content">
+                                    <ul>
+                                        <li><strong>Courses Panel:</strong> Renamed Elements to Courses throughout the
+                                            app for clarity; course selection now mirrors specialisation state
+                                            management</li>
+                                        <li><strong>Assessment Type Sheet:</strong> New sheet showing assessment type
+                                            distributions per course, using binary heatmap visualization</li>
+                                        <li><strong>Contextual Assessment View:</strong> Assessment mapping sheets are
+                                            hidden until a course is selected, keeping the interface focused</li>
+                                        <li><strong>Data Source Badge:</strong> Header now displays a teal ECLIPS pill
+                                            or a gray Manual pill depending on how data was imported</li>
+                                        <li>Fixed course sheet visualization disappearing when switching between sheets
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2.4.0 -->
+                        <div class="timeline-item">
+                            <div class="version-badge">
+                                <span class="badge bg-info">STABLE</span>
+                            </div>
+                            <div class="version-card">
+                                <div class="version-header">
+                                    <h2>Version 2.4.0 <small><span class="badge bg-info">STABLE</span></small></h2>
+                                </div>
+                                <div class="version-content">
+                                    <ul>
+                                        <li><strong>Cloud Program Browser:</strong> Browse and load programs stored in a
+                                            GitHub-backed repository with per-user access control</li>
+                                        <li><strong>Secure Change-Password:</strong> Users can securely update their
+                                            password from within the app</li>
+                                        <li><strong>Updated Subgraph Schema:</strong> ProgramObjectManager updated to
+                                            parse the new ECLIPS subgraph JSON format with container hierarchy and
+                                            version metadata</li>
+                                        <li><strong>Core Toggle:</strong> Filter courses by core vs. elective in the
+                                            Courses sidebar panel</li>
+                                        <li><strong>Missing Data Banner:</strong> Warning banner displayed when the
+                                            loaded program is missing expected mapping data</li>
+                                        <li>Reordered program sheets to show Courses and Dependencies first</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2.3.0 -->
+                        <div class="timeline-item">
+                            <div class="version-badge">
+                                <span class="badge bg-info">STABLE</span>
+                            </div>
+                            <div class="version-card">
+                                <div class="version-header">
+                                    <h2>Version 2.3.0 <small><span class="badge bg-info">STABLE</span></small></h2>
+                                </div>
+                                <div class="version-content">
+                                    <ul>
+                                        <li><strong>Outcomes Overview:</strong> New D3 visualization showing PLOs and
+                                            SLOs per container as an interactive card/list view — only non-empty panels
+                                            are rendered</li>
+                                        <li><strong>SLO/Standards Data Format:</strong> Improved parsing and display of
+                                            SLO row objects; SLOs now appear before Assessments in sheet order</li>
+                                        <li><strong>Mappings Sidebar Moved:</strong> Mappings panel relocated to the
+                                            right side of the screen for a more natural left-to-right workflow</li>
+                                        <li>Clicking a course in the sidebar now opens its corresponding mapping sheet
+                                            directly</li>
+                                        <li>Fixed competency headers to exclude internal fields (Title,
+                                            <code>_full_id</code>) from heatmap columns</li>
+                                        <li>Fixed sheet index resetting correctly when a new file is opened</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2.2.0 -->
+                        <div class="timeline-item">
+                            <div class="version-badge">
+                                <span class="badge bg-info">STABLE</span>
+                            </div>
+                            <div class="version-card">
+                                <div class="version-header">
+                                    <h2>Version 2.2.0 <small><span class="badge bg-info">STABLE</span></small></h2>
+                                </div>
+                                <div class="version-content">
+                                    <ul>
+                                        <li><strong>Treemap Visualization:</strong> New D3-powered treemap showing
+                                            courses and their relative credit-point weight within a specialisation</li>
+                                        <li><strong>Sankey Diagram:</strong> Visualize course prerequisite dependencies
+                                            as a flow diagram — instantly see the chain of required courses</li>
+                                        <li><strong>Assessment × CLO Heatmap:</strong> Click any course to drill into
+                                            a detailed assessment-by-CLO mapping matrix for that course</li>
+                                        <li><strong>Core vs. Elective Courses Sheet:</strong> Specialisation sheets now
+                                            distinguish core and elective courses with visual indicators</li>
+                                        <li>Replaced Plotly treemap with a native D3.js implementation for better
+                                            control and performance</li>
+                                        <li>Fixed plot rendering when switching between files and visualization types
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2.1.0 -->
+                        <div class="timeline-item">
+                            <div class="version-badge">
+                                <span class="badge bg-info">STABLE</span>
+                            </div>
+                            <div class="version-card">
+                                <div class="version-header">
+                                    <h2>Version 2.1.0 <small><span class="badge bg-info">STABLE</span></small></h2>
+                                </div>
+                                <div class="version-content">
+                                    <ul>
+                                        <li><strong>Import Program:</strong> Load a full program structure from a JSON
+                                            subgraph file — courses, specialisations, outcomes and mappings in one
+                                            import</li>
+                                        <li><strong>Specialisations Sidebar:</strong> Dedicated sidebar panel for
+                                            selecting specialisations; courses and mappings filter automatically to
+                                            match</li>
+                                        <li><strong>Auto-Selection:</strong> First specialisation is selected
+                                            automatically on program load so users land on meaningful data immediately
+                                        </li>
+                                        <li><strong>Clean Mapping Names:</strong> Specialisation codes are stripped from
+                                            mapping names when a specialisation filter is active</li>
+                                        <li>Excluded Rules, UNSW Capabilities, and Performance Outcomes 2020 from
+                                            program-level mappings to reduce noise</li>
+                                        <li>Visualization scripts moved to a dedicated subfolder with production-ready
+                                            static asset serving</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2.0.0 (demoted to STABLE) -->
+                        <div class="timeline-item">
+                            <div class="version-badge">
+                                <span class="badge bg-info">STABLE</span>
+                            </div>
+                            <div class="version-card">
+                                <div class="version-header">
+                                    <h2>Version 2.0.0 <small><span class="badge bg-info">STABLE</span></small></h2>
                                 </div>
                                 <div class="version-content">
                                     <ul>
