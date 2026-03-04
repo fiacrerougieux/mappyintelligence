@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20260304">
     <link rel="icon" type="image/jpeg" href="icon.jpg">
     <title>Documentation - Mappy Intelligence</title>
     <!-- Primary Meta Tags -->
     <meta name="title" content="Documentation - Mappy Intelligence">
-    <meta name="description" content="Learn how to use Mappy Intelligence to visualize competency coverage across multiple courses with interactive charts and visualizations.">
+    <meta name="description"
+        content="Learn how to use Mappy Intelligence to visualize competency coverage across multiple courses with interactive charts and visualizations.">
 </head>
+
 <body class="d-flex flex-column vh-100">
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
@@ -21,7 +25,8 @@
                     <span class="brand-text">Mappy</span>
                 </div>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
@@ -66,9 +71,12 @@
                 <div class="col-lg-3 mb-4">
                     <div class="doc-sidebar sticky-top pt-3" style="top: 100px;">
                         <div class="list-group">
-                            <a href="#data-management" class="list-group-item list-group-item-action">1. Data Management</a>
-                            <a href="#visualization" class="list-group-item list-group-item-action">2. Visualization Options</a>
-                            <a href="#editing" class="list-group-item list-group-item-action">3. Editing Competencies</a>
+                            <a href="#data-management" class="list-group-item list-group-item-action">1. Data
+                                Management</a>
+                            <a href="#visualization" class="list-group-item list-group-item-action">2. Visualization
+                                Options</a>
+                            <a href="#editing" class="list-group-item list-group-item-action">3. Editing
+                                Competencies</a>
                             <a href="#advanced" class="list-group-item list-group-item-action">4. Advanced Features</a>
                         </div>
                     </div>
@@ -77,41 +85,49 @@
                     <div id="data-management" class="help-section mb-5">
                         <div class="help-section-header">
                             <div class="help-icon-container">
-                                <svg class="help-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
+                                <svg class="help-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" />
                                 </svg>
                             </div>
                             <h3>1. Data Management</h3>
                         </div>
                         <div class="help-content">
                             <h4>Importing Data</h4>
-                            <p>Mappy analyzes Excel (.xlsx) files where each row represents a course and its competency coverage:</p>
+                            <p>Mappy analyzes Excel (.xlsx) files where each row represents a course and its competency
+                                coverage:</p>
                             <ul>
                                 <li>Select <strong>Open File</strong> from the sidebar to import your Excel file</li>
-                                <li>Use <strong>Pre-filled</strong> to access template-based frameworks for quicker setup</li>
-                                <li>Any non-empty text in a competency cell represents coverage and serves as justification</li>
+                                <li>Use <strong>Pre-filled</strong> to access template-based frameworks for quicker
+                                    setup</li>
+                                <li>Any non-empty text in a competency cell represents coverage and serves as
+                                    justification</li>
                                 <li>Required columns: aspect (competency name), course_code (identifier)</li>
                                 <li>Optional columns: term, year for progression visualization</li>
                             </ul>
-                            
+
                             <h4>Data Management</h4>
                             <p>Work with your curriculum data efficiently:</p>
                             <ul>
                                 <li>Use spreadsheet view for bulk editing with search capability</li>
                                 <li>Create custom competency frameworks with the framework manager</li>
                                 <li>Maintain multiple data sheets with independent visualizations</li>
-                                <li>Select <strong>Save File</strong> to export in Excel (.xlsx), JSON (.json), or CSV (.csv) formats</li>
+                                <li>Select <strong>Save File</strong> to export in Excel (.xlsx), JSON (.json), or CSV
+                                    (.csv) formats</li>
                             </ul>
-                            
+
                             <h4>Sheet Management</h4>
-                            <p>Navigate between different data sheets using the sheet selector bar. Each sheet maintains its own visualization settings and selected competencies.</p>
+                            <p>Navigate between different data sheets using the sheet selector bar. Each sheet maintains
+                                its own visualization settings and selected competencies.</p>
                         </div>
                     </div>
-          
+
                     <div id="visualization" class="help-section mb-5">
                         <div class="help-section-header">
                             <div class="help-icon-container">
-                                <svg class="help-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <svg class="help-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
                                     <rect x="3" y="3" width="18" height="18" rx="2" />
                                     <line x1="9" y1="3" x2="9" y2="21" />
                                     <line x1="15" y1="3" x2="15" y2="21" />
@@ -123,16 +139,21 @@
                         </div>
                         <div class="help-content">
                             <p>Mappy offers multiple visualization methods to analyze your curriculum data:</p>
-                            
+
                             <h4>Radar Charts</h4>
-                            <p>Displays competency distribution across courses with each axis representing a competency area. Features include weighted analysis with adaptive scaling and custom color selection via grid picker.</p>
-                            
+                            <p>Displays competency distribution across courses with each axis representing a competency
+                                area. Features include weighted analysis with adaptive scaling and custom color
+                                selection via grid picker.</p>
+
                             <h4>Binary Heatmaps</h4>
-                            <p>Shows presence/absence of competencies across all courses using a color-coded matrix with standardized Viridis colorscale. Includes scroll indicators for large assessment datasets.</p>
-                            
+                            <p>Shows presence/absence of competencies across all courses using a color-coded matrix with
+                                standardized Viridis colorscale. Includes scroll indicators for large assessment
+                                datasets.</p>
+
                             <h4>Cumulative Heatmaps</h4>
-                            <p>Displays the progressive competency coverage across the curriculum with independent dropdown selections and adaptive bottom margins for better display.</p>
-                            
+                            <p>Displays the progressive competency coverage across the curriculum with independent
+                                dropdown selections and adaptive bottom margins for better display.</p>
+
                             <h4>Educational Taxonomies</h4>
                             <p>Visualizes educational frameworks with precise mathematical models:</p>
                             <ul>
@@ -142,12 +163,14 @@
                                 <li>Krathwohl's Affective Domain taxonomy support</li>
                                 <li>Dynamic assessment text formatting with proper line wrapping</li>
                             </ul>
-                            
+
                             <h4>Elective Path Visualization</h4>
-                            <p>Tracks competency progression over time with position-based x-axis for clear navigation and fill-between-curves styling for better readability.</p>
-                            
+                            <p>Tracks competency progression over time with position-based x-axis for clear navigation
+                                and fill-between-curves styling for better readability.</p>
+
                             <h4>Term/Year Layout</h4>
-                            <p>Organizes courses by academic terms and years for a chronological view of the curriculum:</p>
+                            <p>Organizes courses by academic terms and years for a chronological view of the curriculum:
+                            </p>
                             <ul>
                                 <li>Use one empty row in your spreadsheet to separate terms</li>
                                 <li>Use two consecutive empty rows to indicate year boundaries</li>
@@ -159,7 +182,8 @@
                     <div id="editing" class="help-section mb-5">
                         <div class="help-section-header">
                             <div class="help-icon-container">
-                                <svg class="help-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <svg class="help-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
                                     <path d="M12 20h9"></path>
                                     <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
                                 </svg>
@@ -171,10 +195,11 @@
                             <h4>Direct Editing</h4>
                             <ol>
                                 <li>Click on any cell in the heatmap visualizations to open the editing dialog</li>
-                                <li>Enter or modify the justification text that explains how the competency is addressed</li>
+                                <li>Enter or modify the justification text that explains how the competency is addressed
+                                </li>
                                 <li>Click <strong>Save</strong> to apply your changes to the visualization</li>
                             </ol>
-                            
+
                             <h4>Spreadsheet View</h4>
                             <ol>
                                 <li>Click the <strong>Edit Data</strong> button in the sidebar</li>
@@ -182,19 +207,23 @@
                                 <li>Use the search bar to quickly find specific content</li>
                                 <li>Click <strong>Save Changes</strong> to apply all modifications</li>
                             </ol>
-                            
+
                             <h4>Framework Management</h4>
-                            <p>Create and customize competency frameworks through the framework manager for template-based analysis.</p>
-                            
-                            <p>Remember to use <strong>Save File</strong> after editing to persist your changes to disk.</p>
+                            <p>Create and customize competency frameworks through the framework manager for
+                                template-based analysis.</p>
+
+                            <p>Remember to use <strong>Save File</strong> after editing to persist your changes to disk.
+                            </p>
                         </div>
                     </div>
 
                     <div id="advanced" class="help-section mb-5">
                         <div class="help-section-header">
                             <div class="help-icon-container">
-                                <svg class="help-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12,2 C17.5,2 22,6.5 22,12 C22,17.5 17.5,22 12,22 C6.5,22 2,17.5 2,12 C2,6.5 6.5,2 12,2 Z" />
+                                <svg class="help-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M12,2 C17.5,2 22,6.5 22,12 C22,17.5 17.5,22 12,22 C6.5,22 2,17.5 2,12 C2,6.5 6.5,2 12,2 Z" />
                                     <path d="M12 16v-4M12 8h.01" />
                                 </svg>
                             </div>
@@ -204,14 +233,17 @@
                             <h4>Visualization Export</h4>
                             <p>Export your visualizations for reports and presentations:</p>
                             <ul>
-                                <li>Use the <strong>DL All</strong> button to download all visualizations as image files</li>
+                                <li>Use the <strong>DL All</strong> button to download all visualizations as image files
+                                </li>
                                 <li>Generate comprehensive PDF reports with the <strong>PDF</strong> button</li>
                                 <li>Export in CSV, XLSX, or JSON formats for further analysis</li>
                             </ul>
-                            
+
                             <h4>Multi-Sheet Support</h4>
-                            <p>Navigate between different data sheets using the sheet selector bar below the visualization toolbar. Each sheet can contain different courses or competency frameworks.</p>
-                            
+                            <p>Navigate between different data sheets using the sheet selector bar below the
+                                visualization toolbar. Each sheet can contain different courses or competency
+                                frameworks.</p>
+
                             <h4>Settings & Preferences</h4>
                             <p>Access the Settings panel from the status bar to customize:</p>
                             <ul>
@@ -219,7 +251,7 @@
                                 <li>Data: Export format preferences and analysis thresholds</li>
                                 <li>Behavior: Startup options, auto-save, and default visualization type</li>
                             </ul>
-                            
+
                             <h4>Framework Analysis</h4>
                             <p>Analyze curriculum against various educational frameworks:</p>
                             <ul>
@@ -229,12 +261,13 @@
                                 <li>Krathwohl's Affective Domain taxonomy</li>
                                 <li>Professional standards (AMC, APS, EA, SDG, etc.)</li>
                             </ul>
-                            
+
                             <h4>Weighted Analysis</h4>
-                            <p>Enable weighted analysis with the <strong>Weight</strong> toggle button to factor in assessment weightings when analyzing competency coverage.</p>
+                            <p>Enable weighted analysis with the <strong>Weight</strong> toggle button to factor in
+                                assessment weightings when analyzing competency coverage.</p>
                         </div>
                     </div>
-                    
+
                     <div class="help-footer">
                         <p>For additional support or to report issues, please contact your system administrator.</p>
                         <p>&copy; 2025 Mappy Intelligence. All rights reserved.</p>
@@ -267,22 +300,24 @@
         <p class="text-center">© 2025 Mappy Intelligence</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <script>
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
-                
+
                 if (targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 100,
                         behavior: 'smooth'
                     });
-                    
+
                     // Update active state in sidebar
                     document.querySelectorAll('.doc-sidebar .list-group-item').forEach(item => {
                         item.classList.remove('active');
@@ -291,23 +326,23 @@
                 }
             });
         });
-        
+
         // Highlight active section on scroll
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const sections = document.querySelectorAll('.help-section');
             const navItems = document.querySelectorAll('.doc-sidebar .list-group-item');
-            
+
             let currentSection = '';
-            
+
             sections.forEach(section => {
                 const sectionTop = section.offsetTop - 120;
                 const sectionHeight = section.offsetHeight;
-                
+
                 if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
                     currentSection = '#' + section.getAttribute('id');
                 }
             });
-            
+
             navItems.forEach(item => {
                 item.classList.remove('active');
                 if (item.getAttribute('href') === currentSection) {
@@ -316,25 +351,25 @@
             });
         });
     </script>
-    
+
     <style>
         /* Documentation specific styles */
         .documentation-header {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
             color: var(--text-light);
         }
-        
+
         .documentation-content {
             background-color: #ffffff;
         }
-        
+
         .help-section {
             padding: 20px;
             background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
-        
+
         .help-section-header {
             display: flex;
             align-items: center;
@@ -342,7 +377,7 @@
             padding-bottom: 10px;
             border-bottom: 1px solid var(--border-color);
         }
-        
+
         .help-icon-container {
             display: flex;
             align-items: center;
@@ -353,57 +388,58 @@
             border-radius: 50%;
             margin-right: 15px;
         }
-        
+
         .help-icon {
             color: white;
         }
-        
+
         .help-section h2 {
             margin: 0;
             font-weight: 600;
             color: var(--primary-dark);
         }
-        
+
         .help-content {
             padding-left: 55px;
         }
-        
+
         .help-content h3 {
             font-size: 1.3rem;
             margin-top: 25px;
             margin-bottom: 15px;
             color: var(--primary-dark);
         }
-        
+
         .help-content h3:first-child {
             margin-top: 0;
         }
-        
-        .help-content p, .help-content li {
+
+        .help-content p,
+        .help-content li {
             color: #555;
             line-height: 1.6;
         }
-        
+
         .help-content ul {
             margin-bottom: 20px;
         }
-        
+
         .doc-sidebar .list-group-item {
             border-radius: 0;
             border-left: 3px solid transparent;
         }
-        
+
         .doc-sidebar .list-group-item.active {
             background-color: rgba(26, 115, 232, 0.1);
             color: var(--primary-dark);
             border-left: 3px solid var(--primary-color);
             font-weight: 600;
         }
-        
+
         .doc-sidebar .list-group-item:hover {
             background-color: rgba(26, 115, 232, 0.05);
         }
-        
+
         kbd {
             display: inline-block;
             padding: 3px 6px;
@@ -415,7 +451,7 @@
             border-radius: 3px;
             box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
         }
-        
+
         @media (max-width: 991px) {
             .doc-sidebar {
                 position: static !important;
@@ -424,4 +460,5 @@
         }
     </style>
 </body>
+
 </html>
