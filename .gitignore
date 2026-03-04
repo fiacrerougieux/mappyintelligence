@@ -1,0 +1,49 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# Temp files
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+
+# Application specific
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
