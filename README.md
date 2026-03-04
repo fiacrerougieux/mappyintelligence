@@ -102,12 +102,10 @@ The website currently has the following sections implemented:
    - ✅ Waiting list page (waiting-list.html)
    - ✅ Documentation page (documentation.html)
    - ✅ Release notes page (release-notes.html)
-   - ✅ Templates page (templates.html)
    
 2. **Visual Assets**:
    - ✅ Main application logo (`logo-ultra.png`)
    - ✅ Screenshots and demo videos of the application
-   - ✅ Curriculum analysis template Excel files
    
 3. **Features**:
    - ✅ Interactive accordion sections
