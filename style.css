@@ -844,3 +844,240 @@ body {
         font-size: 2rem;
     }
 }
+
+/* Mission Bullets */
+.mission-bullets {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 20px auto 0;
+    text-align: left;
+}
+
+.mission-bullets li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.mission-bullets li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Shared Section Titles */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+/* Core Uses Section */
+.core-uses-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+}
+
+.core-uses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.core-use-card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 30px 24px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.core-use-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.core-use-card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.core-use-card h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.core-use-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .core-uses-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* Curriculum Mapping Explained */
+.mapping-explained-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+}
+
+.mapping-definition {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    padding: 25px 30px;
+    border-left: 4px solid var(--primary-color);
+    background-color: #f0f6ff;
+    border-radius: 0 8px 8px 0;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--text-dark);
+    font-style: italic;
+}
+
+.mapping-concepts {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.mapping-concept-item {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+.mapping-concept-item i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.mapping-concept-item h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.mapping-concept-item p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Strategic Capabilities Table */
+.strategic-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.strategic-table thead {
+    background: linear-gradient(90deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+    color: white;
+}
+
+.strategic-table th {
+    padding: 14px 20px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+.strategic-table td {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    border-bottom: 1px solid #eee;
+}
+
+.strategic-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.strategic-table tbody tr:hover {
+    background-color: #e8f0fe;
+}
+
+/* Institutional Use Cases */
+.use-cases-section {
+    padding: 80px 20px;
+    background-color: var(--light-bg);
+}
+
+.use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.use-case-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 30px 24px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.use-case-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.use-case-card i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.use-case-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.use-case-card p {
+    font-size: 0.93rem;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+}
