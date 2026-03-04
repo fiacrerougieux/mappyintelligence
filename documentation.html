@@ -48,11 +48,7 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto mb-2 mb-lg-0 secondary-nav">
-                    <li class="nav-item social-item">
-                        <a class="nav-link social-link" href="https://discord.gg/SZMNea5s" aria-label="Discord">
-                            <i class="fab fa-discord fa-lg"></i>
-                        </a>
-                    </li>
+
                 </ul>
             </div>
         </div>
@@ -309,17 +305,16 @@
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
 
-                const targetId = this.getAttribute('href');
+   st targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
 
-                if (targetElement) {
+                if {
                     window.scrollTo({
                         top: targetElement.offsetTop - 100,
                         behavior: 'smooth'
                     });
 
-                    // Update active state in sidebar
-                    document.querySelectorAll('.doc-sidebar .list-group-item').forEach(item => {
+                    // Update activ                   document.querySelectorAll('.doc-sidebar .list-group-item').forEach(item => {
                         item.classList.remove('active');
                     });
                     this.classList.add('active');
@@ -328,24 +323,23 @@
         });
 
         // Highlight active section on scroll
-        window.addEventListener('scroll', function () {
-            const sections = document.querySelectorAll('.help-section');
+        wdEventListener('scroll', function () {
+            const sections = document.querySelectorAll('.h elp-section');
             const navItems = document.querySelectorAll('.doc-sidebar .list-group-item');
 
             let currentSection = '';
 
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 120;
+            sections.for => {
+                const sectionTopffsetTop - 120;
                 const sectionHeight = section.offsetHeight;
 
-                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-                    currentSection = '#' + section.getAttribute('id');
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sect                 currentSection = '#' + section.getAttribute('id');
                 }
             });
 
             navItems.forEach(item => {
                 item.classList.remove('active');
-                if (item.getAttribute('href') === currentSection) {
+              etAttribute('href') === currentSection) {
                     item.classList.add('active');
                 }
             });
